@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#D4C5A8"/>
+      <stop offset="0.6" stop-color="#B8A282"/>
+      <stop offset="1" stop-color="#8C7458"/>
+    </linearGradient>
+    <linearGradient id="overlay" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1A1A1A" stop-opacity="0.05"/>
+      <stop offset="1" stop-color="#1A1A1A" stop-opacity="0.55"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#sky)"/>
+  <!-- abstract rolling hills/houses suggestion -->
+  <path d="M0 620 Q400 540 800 580 T1600 560 L1600 900 L0 900 Z" fill="#5A4A38" opacity="0.6"/>
+  <path d="M0 720 Q400 660 800 700 T1600 680 L1600 900 L0 900 Z" fill="#3D3022" opacity="0.7"/>
+  <rect width="1600" height="900" fill="url(#overlay)"/>
+  <text x="800" y="450" text-anchor="middle" font-family="Inter, sans-serif" font-size="14" fill="#FAF8F4" opacity="0.5" letter-spacing="4">[ HERO IMAGE PLACEHOLDER ]</text>
+</svg>

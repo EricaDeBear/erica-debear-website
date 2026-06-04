@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="vg4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8C7458"/>
+      <stop offset="1" stop-color="#5A4A38"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="800" fill="url(#vg4)"/>
+  <circle cx="300" cy="400" r="50" fill="#F2EDE3" opacity="0.9"/>
+  <polygon points="285,375 285,425 330,400" fill="#1A1A1A"/>
+  <text x="300" y="740" text-anchor="middle" font-family="Inter, sans-serif" font-size="10" fill="#F2EDE3" opacity="0.6" letter-spacing="3">VIDEO PLACEHOLDER 4</text>
+</svg>
