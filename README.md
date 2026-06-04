@@ -1,4 +1,4 @@
-# Erica [Surname] — Real Estate Site
+# Erica DeBear — Real Estate Site
 
 A Next.js + Tailwind v4 + TypeScript site built as a structural framework
 modeled on the layout of brockandlori.com. All copy and imagery is placeholder
