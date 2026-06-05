@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { site } from "@/content/site";
 
 export default function AsSeenIn() {
@@ -6,15 +7,28 @@ export default function AsSeenIn() {
   return (
     <section className="py-16 sm:py-20 border-y border-[var(--color-line)]">
       <div className="container-narrow">
-        <p className="overline text-center mb-8">{overline}</p>
-        <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-14">
+        <p className="overline text-center mb-10">{overline}</p>
+        <div className="flex flex-wrap items-center justify-center gap-10 sm:gap-16">
           {outlets.map((outlet) => (
             <Link
               key={outlet.name}
               href={outlet.href}
-              className="text-ink-soft hover:text-ink transition font-display text-lg sm:text-xl tracking-tight opacity-70 hover:opacity-100"
+              className="block opacity-50 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-300"
+              aria-label={outlet.name}
             >
-              {outlet.name}
+              {"logo" in outlet && outlet.logo ? (
+                <Image
+                  src={outlet.logo}
+                  alt={outlet.name}
+                  width={160}
+                  height={32}
+                  className="h-7 sm:h-8 w-auto"
+                />
+              ) : (
+                <span className="font-display text-lg sm:text-xl tracking-tight text-ink">
+                  {outlet.name}
+                </span>
+              )}
             </Link>
           ))}
         </div>

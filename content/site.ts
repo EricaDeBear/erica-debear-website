@@ -101,10 +101,10 @@ export const site = {
   asSeenIn: {
     overline: "As Seen In",
     outlets: [
-      { name: "New York Post", href: "/press" },
-      { name: "Robb Report", href: "/press" },
-      { name: "AOL", href: "/press" },
-      { name: "The Eastsider LA", href: "/press" },
+      { name: "New York Post", href: "/press", logo: "/images/press-nypost.svg" },
+      { name: "Robb Report", href: "/press", logo: "/images/press-robbreport.svg" },
+      { name: "AOL", href: "/press", logo: "/images/press-aol.svg" },
+      { name: "The Eastsider LA", href: "/press", logo: "/images/press-eastsider.svg" },
     ],
   },
 
