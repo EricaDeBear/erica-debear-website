@@ -1,6 +1,15 @@
+import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "Services",
+  description:
+    "How Erica DeBear works with sellers, buyers, first-time buyers, and investors across Greater Los Angeles, from preparation and pricing through closing.",
+  alternates: { canonical: "/our-services" },
+};
 
 const services = [
   {
@@ -100,6 +109,19 @@ export default function ServicesPage() {
               )}
             </div>
           ))}
+        </div>
+
+        {/* Visual break */}
+        <div className="container-wide mb-24">
+          <div className="relative aspect-[21/9] overflow-hidden">
+            <Image
+              src="/images/services-deck.jpg"
+              alt="Rooftop deck overlooking Los Angeles"
+              fill
+              sizes="100vw"
+              className="object-cover"
+            />
+          </div>
         </div>
 
         {/* The Erica Network */}

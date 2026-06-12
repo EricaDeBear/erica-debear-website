@@ -1,8 +1,16 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { site } from "@/content/site";
 import { LaurelIcon } from "@/components/icons";
+
+export const metadata: Metadata = {
+  title: "Press and Recognition",
+  description:
+    "Media coverage of Erica DeBear's Los Angeles listings in the New York Post, Robb Report, and more, plus industry awards earned over a multi-year track record.",
+  alternates: { canonical: "/press" },
+};
 
 export default function PressPage() {
   const { press } = site;
@@ -60,6 +68,7 @@ export default function PressPage() {
                   <LaurelIcon className="w-16 h-16 mb-3" style={{ color: "var(--color-gold)" }} />
                   <p className="font-display text-3xl mb-2">{award.year}</p>
                   <p className="text-ink-muted text-sm">{award.title}</p>
+                  <p className="text-ink-soft text-xs mt-1">{award.issuer}</p>
                 </div>
               ))}
             </div>

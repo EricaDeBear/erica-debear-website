@@ -2,18 +2,12 @@
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Script from "next/script";
 import Link from "next/link";
 
 export default function SearchPage() {
   return (
     <>
       <Header />
-      <Script
-        src="https://em.realscout.com/widgets/realscout-web-components.umd.js"
-        type="module"
-        strategy="afterInteractive"
-      />
       <main className="pt-32 pb-24">
         <div className="container-narrow text-center mb-16">
           <p className="overline mb-4">Search Homes</p>

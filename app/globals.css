@@ -24,9 +24,10 @@
   --color-accent-hover: #232C20;   /* pressed / hover */
   --color-gold:         #9A7A46;   /* antique brass — DECORATIVE detail accent only */
 
-  /* Typography */
-  --font-display: "Fraunces", "Playfair Display", Georgia, "Times New Roman", serif;
-  --font-sans: "Hanken Grotesk", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  /* Typography — self-hosted via next/font in app/layout.tsx, which sets
+     the --font-fraunces / --font-hanken variables on <html>. */
+  --font-display: var(--font-fraunces, "Fraunces"), Georgia, "Times New Roman", serif;
+  --font-sans: var(--font-hanken, "Hanken Grotesk"), -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
   /* Layout */
   --container-prose: 65ch;
@@ -133,6 +134,26 @@
     to   { opacity: 1; transform: translateY(0); }
   }
   .fade-up { animation: fadeUp 0.8s ease-out both; }
+
+  /* Scroll reveal — elements with .reveal start hidden and animate in
+     when they enter the viewport (driven by components/ScrollReveal.tsx).
+     Restrained on purpose: small rise, slow ease, no bounce. */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Respect visitors who turn off animations at the OS level */
+  @media (prefers-reduced-motion: reduce) {
+    .fade-up { animation: none; }
+    .reveal { opacity: 1; transform: none; transition: none; }
+    html { scroll-behavior: auto; }
+  }
 }
 
 /* ============================================================

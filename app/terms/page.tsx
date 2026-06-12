@@ -1,10 +1,17 @@
+import type { Metadata } from "next";
 import { readFileSync } from "fs";
 import { join } from "path";
 import LegalPage from "@/components/LegalPage";
 import { markdownToHtml } from "@/lib/markdown";
 
+export const metadata: Metadata = {
+  title: "Terms of Use",
+  description: "Terms of use for ericadebear.com, the website of Los Angeles real estate broker Erica DeBear.",
+  alternates: { canonical: "/terms" },
+};
+
 export default function TermsPage() {
-  const md = readFileSync(join(process.cwd(), "..", "legalpages", "terms-of-use.md"), "utf-8");
+  const md = readFileSync(join(process.cwd(), "legalpages", "terms-of-use.md"), "utf-8");
   const html = markdownToHtml(md);
   return (
     <LegalPage title="Terms of Use">

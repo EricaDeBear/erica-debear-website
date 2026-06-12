@@ -1,7 +1,15 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: "About Erica",
+  description:
+    "From Manhattan gallerist and film producer to licensed Los Angeles broker and investor. Twelve years, 75+ homes closed, and a 5.0-star record on Zillow.",
+  alternates: { canonical: "/about" },
+};
 
 const differentiators = [
   {
@@ -65,6 +73,7 @@ export default function AboutPage() {
               src="/images/erica_headshot.jpg"
               alt="Erica DeBear"
               fill
+              priority
               sizes="(max-width: 1100px) 100vw, 1100px"
               className="object-cover"
             />
@@ -89,8 +98,8 @@ export default function AboutPage() {
         <div className="container-narrow mb-24">
           <div className="relative aspect-[16/9] overflow-hidden bg-[var(--color-bg-muted)]">
             <Image
-              src="/images/erica_dogs_lifestyle.jpg"
-              alt="Erica at home"
+              src="/images/about-patio.jpg"
+              alt="Outdoor living at a Los Angeles home"
               fill
               sizes="(max-width: 1100px) 100vw, 1100px"
               className="object-cover"
@@ -126,15 +135,28 @@ export default function AboutPage() {
 
         {/* By the Numbers */}
         <div className="bg-[var(--color-bg-muted)] py-20 sm:py-28 mb-24">
-          <div className="container-narrow">
-            <h2 className="font-display text-4xl sm:text-5xl mb-12 text-center">By the numbers</h2>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-6 max-w-3xl mx-auto">
-              {byTheNumbers.map((item) => (
-                <p key={item} className="text-ink-muted leading-relaxed flex items-start gap-3">
-                  <span className="text-accent mt-1.5 flex-none">&#9670;</span>
-                  {item}
-                </p>
-              ))}
+          <div className="container-wide">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div className="relative aspect-[4/3] overflow-hidden">
+                <Image
+                  src="/images/about-twilight.jpg"
+                  alt="Los Angeles neighborhood at twilight"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                />
+              </div>
+              <div>
+                <h2 className="font-display text-4xl sm:text-5xl mb-12">By the numbers</h2>
+                <div className="grid sm:grid-cols-2 gap-x-12 gap-y-6">
+                  {byTheNumbers.map((item) => (
+                    <p key={item} className="text-ink-muted leading-relaxed flex items-start gap-3">
+                      <span className="text-accent mt-1.5 flex-none">&#9670;</span>
+                      {item}
+                    </p>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
