@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Fraunces, Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
 import { site } from "@/content/site";
+
+const GA_MEASUREMENT_ID = "G-55V6VBHM51";
 
 /* Self-hosted via next/font: fonts are bundled with the site at build time,
    so there is no render-blocking request to Google and no flash of the
@@ -106,7 +109,21 @@ export default function RootLayout({
           <style>{`.reveal { opacity: 1 !important; transform: none !important; }`}</style>
         </noscript>
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        {/* Google Analytics 4 — loads after the page is interactive so it
+            never slows down what visitors see */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_MEASUREMENT_ID}');`}
+        </Script>
+      </body>
     </html>
   );
 }
