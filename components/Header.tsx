@@ -44,6 +44,7 @@ export default function Header({ transparent = false }: { transparent?: boolean 
   const hoverClass = isLight ? "hover:text-on-dark" : "hover:text-accent";
 
   return (
+    <>
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
         (scrolled || !transparent) ? "bg-[var(--color-bg)]/95 backdrop-blur shadow-sm" : "bg-transparent"
@@ -127,9 +128,15 @@ export default function Header({ transparent = false }: { transparent?: boolean 
         </button>
       </div>
 
-      {/* Mobile menu overlay */}
+      </header>
+
+      {/* Mobile menu overlay — rendered as a SIBLING of <header>, not inside it.
+          The header uses backdrop-blur; a backdrop-filter makes its element the
+          containing block for position:fixed descendants, which otherwise traps
+          this overlay inside the ~115px header instead of covering the full
+          screen. Keeping it outside the header is the fix. */}
       {open && (
-        <div className="fixed inset-0 z-50 bg-[var(--color-bg)] lg:hidden flex flex-col">
+        <div className="fixed inset-0 z-[60] bg-[var(--color-bg)] lg:hidden flex flex-col">
           <div className="container-wide flex items-center justify-between py-5 border-b border-[var(--color-line)]">
             <Link href="/" onClick={() => setOpen(false)} aria-label="Home">
               <Wordmark />
@@ -174,6 +181,6 @@ export default function Header({ transparent = false }: { transparent?: boolean 
           </nav>
         </div>
       )}
-    </header>
+    </>
   );
 }
