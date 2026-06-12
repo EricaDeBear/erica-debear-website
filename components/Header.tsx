@@ -1,10 +1,24 @@
 "use client";
 
 import Link from "next/link";
-import Image from "next/image";
 import { useState, useEffect } from "react";
 import { site } from "@/content/site";
 import { MenuIcon, CloseIcon, ChevronDownIcon } from "./icons";
+
+/* Text wordmark rendered in the real brand fonts (the old SVG referenced
+   fonts that can't load inside an <img>, so it silently fell back). */
+function Wordmark({ light = false }: { light?: boolean }) {
+  return (
+    <span className="block text-center leading-none">
+      <span className={`block font-display text-xl lg:text-[1.4rem] tracking-[0.12em] ${light ? "text-on-dark" : "text-ink"}`}>
+        {site.brand.nameLine1.toUpperCase()}
+      </span>
+      <span className={`block font-sans text-[8px] lg:text-[9px] font-medium tracking-[0.5em] mt-1.5 ${light ? "text-on-dark/70" : "text-ink-muted"}`}>
+        {site.brand.nameLine2.toUpperCase()}
+      </span>
+    </span>
+  );
+}
 
 export default function Header({ transparent = false }: { transparent?: boolean }) {
   const [open, setOpen] = useState(false);
@@ -59,14 +73,7 @@ export default function Header({ transparent = false }: { transparent?: boolean 
       {/* Main row */}
       <div className="container-wide flex items-center justify-between py-5">
         <Link href="/" className="block" aria-label="Home">
-          <Image
-            src={isLight ? site.brand.logoLight : site.brand.logo}
-            alt={site.brand.name}
-            width={220}
-            height={50}
-            priority
-            className="h-10 lg:h-12 w-auto"
-          />
+          <Wordmark light={isLight} />
         </Link>
 
         {/* Desktop nav */}
@@ -124,7 +131,9 @@ export default function Header({ transparent = false }: { transparent?: boolean 
       {open && (
         <div className="fixed inset-0 z-50 bg-[var(--color-bg)] lg:hidden flex flex-col">
           <div className="container-wide flex items-center justify-between py-5 border-b border-[var(--color-line)]">
-            <Image src={site.brand.logo} alt={site.brand.name} width={180} height={40} className="h-10 w-auto" />
+            <Link href="/" onClick={() => setOpen(false)} aria-label="Home">
+              <Wordmark />
+            </Link>
             <button onClick={() => setOpen(false)} aria-label="Close menu" className="p-2">
               <CloseIcon className="w-6 h-6" />
             </button>

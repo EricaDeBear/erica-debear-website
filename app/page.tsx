@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import ScrollReveal from "@/components/ScrollReveal";
 import StatsStrip from "@/components/StatsStrip";
 import MeetTeam from "@/components/MeetTeam";
 import AsSeenIn from "@/components/AsSeenIn";
@@ -14,6 +15,7 @@ export default function Home() {
   return (
     <>
       <Header transparent />
+      <ScrollReveal />
       <main>
         <Hero />
         <StatsStrip />

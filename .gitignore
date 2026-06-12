@@ -24,3 +24,4 @@ next-env.d.ts
 # Raw source assets (full-resolution photos/videos live in Drive, not the repo)
 /videos/
 /images/
+tsconfig.tsbuildinfo

@@ -1,13 +1,25 @@
 "use client";
 
+import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { useState } from "react";
 
 export default function NewsletterPage() {
   const [subscribed, setSubscribed] = useState(false);
-  const onSubmit = (e: React.FormEvent) => {
+
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+    try {
+      await fetch(
+        "https://elliman.us20.list-manage.com/subscribe/post?u=e7855a84fe45867ea20c9fd30&id=6db0213b78&f_id=00f3cbf1f0",
+        { method: "POST", body: formData, mode: "no-cors" },
+      );
+    } catch {
+      // no-cors means we can't read the response, but the request goes through
+    }
     setSubscribed(true);
   };
 
@@ -19,7 +31,7 @@ export default function NewsletterPage() {
           <p className="overline mb-4">Newsletter</p>
           <h1 className="font-display text-5xl sm:text-6xl mb-8">Stay close to the market.</h1>
           <p className="text-lg text-ink-muted leading-relaxed max-w-xl mx-auto mb-10">
-            A monthly note from Erica on what is moving in LA real estate, homes worth knowing about (some before they list), and straight talk for buyers, sellers, and owners.
+            Stay ahead of the Los Angeles real estate market with insider insights, exclusive previews of listings before they hit the market, and curated recommendations for the best of LA.
           </p>
 
           <div className="text-left max-w-md mx-auto mb-12">
@@ -27,15 +39,15 @@ export default function NewsletterPage() {
             <ul className="space-y-3 text-ink-muted leading-relaxed">
               <li className="flex items-start gap-3">
                 <span className="text-accent mt-1 flex-none">&#9670;</span>
-                Market reads on the neighborhoods you care about
+                Insider insights on the neighborhoods you care about
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-accent mt-1 flex-none">&#9670;</span>
-                Early looks at listings, sometimes before they hit the market
+                Exclusive previews of listings before they hit the market
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-accent mt-1 flex-none">&#9670;</span>
-                Practical guidance from a broker who knows the contracts cold and runs her own LA investment portfolio
+                Curated recommendations for the best of LA
               </li>
             </ul>
           </div>
@@ -50,17 +62,40 @@ export default function NewsletterPage() {
               <div className="flex gap-3">
                 <input
                   type="email"
+                  name="EMAIL"
                   required
+                  aria-label="Email address"
                   placeholder="Your email address"
                   className="flex-1 bg-transparent border-b border-[var(--color-ink)]/30 py-3 focus:outline-none focus:border-[var(--color-accent)] transition placeholder:text-ink-soft"
                 />
                 <button type="submit" className="btn btn-primary">Subscribe</button>
+              </div>
+              {/* Mailchimp honeypot — prevents bot signups */}
+              <div aria-hidden="true" style={{ position: "absolute", left: "-5000px" }}>
+                <input
+                  type="text"
+                  name="b_e7855a84fe45867ea20c9fd30_6db0213b78"
+                  tabIndex={-1}
+                  defaultValue=""
+                />
               </div>
               <p className="text-xs text-ink-soft mt-4">
                 Once a month. No noise. Unsubscribe anytime.
               </p>
             </form>
           )}
+        </div>
+
+        <div className="container-narrow mt-20">
+          <div className="relative aspect-[21/9] overflow-hidden">
+            <Image
+              src="/images/newsletter-livingroom.jpg"
+              alt="Bright modern living room"
+              fill
+              sizes="(max-width: 1100px) 100vw, 1100px"
+              className="object-cover"
+            />
+          </div>
         </div>
       </main>
       <Footer />

@@ -9,7 +9,7 @@ export default function FeaturedProperties() {
   return (
     <section className="py-24 sm:py-32 bg-[var(--color-bg)]">
       <div className="container-wide">
-        <div className="mb-12">
+        <div className="mb-12 reveal">
           <p className="overline mb-3">{overline}</p>
           <h2 className="font-display text-4xl sm:text-5xl max-w-2xl mb-3">{heading}</h2>
           {subheading && (

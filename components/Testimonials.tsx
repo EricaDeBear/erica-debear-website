@@ -13,7 +13,7 @@ export default function Testimonials() {
   const t = items[i];
   return (
     <section id="testimonials" className="py-24 sm:py-32 bg-[var(--color-bg-muted)]">
-      <div className="container-narrow">
+      <div className="container-narrow reveal">
         <p className="overline text-center mb-4">{overline}</p>
         <h2 className="font-display text-4xl sm:text-5xl text-center mb-4">{heading}</h2>
         {subheading && (
@@ -36,7 +36,7 @@ export default function Testimonials() {
           <blockquote className="font-display italic text-xl sm:text-2xl leading-relaxed text-ink mb-8">
             &ldquo;{t.quote}&rdquo;
           </blockquote>
-          <p className="overline">-- {t.attribution}</p>
+          <p className="overline">{t.attribution}</p>
 
           <div className="flex items-center justify-center gap-6 mt-12">
             <button onClick={prev} aria-label="Previous" className="p-3 rounded-full border border-[var(--color-ink)]/30 hover:bg-[var(--color-ink)] hover:text-on-dark transition">
