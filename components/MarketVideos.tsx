@@ -32,9 +32,9 @@ export default function MarketVideos() {
           <h2 className="font-display text-4xl sm:text-5xl mb-5">{heading}</h2>
           <p className="text-ink-muted">{body}</p>
         </div>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-10 sm:gap-x-6 sm:gap-y-12 items-start">
           {items.map((v, i) => (
-            <button key={i} onClick={() => setActive(i)} className="group block text-left cursor-pointer" aria-label={`Play video: ${v.title}`}>
+            <button key={i} onClick={() => setActive(i)} className="group block w-full text-left cursor-pointer" aria-label={`Play video: ${v.title}`}>
               <div className="relative aspect-[3/4] overflow-hidden bg-[var(--color-bg-muted)] mb-4">
                 <Image src={v.thumbnail} alt={v.title} fill sizes="(max-width: 1024px) 50vw, 25vw" className="object-cover transition-transform duration-500 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition" />
@@ -44,7 +44,8 @@ export default function MarketVideos() {
                   </div>
                 </div>
               </div>
-              <h3 className="font-display text-lg leading-snug group-hover:text-accent transition">
+              {/* min-height reserves two lines so one-line titles don't make rows ragged */}
+              <h3 className="font-display text-lg leading-snug text-balance group-hover:text-accent transition min-h-[2.75em]">
                 {v.title}
               </h3>
             </button>

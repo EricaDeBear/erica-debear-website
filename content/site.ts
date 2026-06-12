@@ -237,21 +237,6 @@ export const site = {
         thumbnail: "/images/video-thumb-valley-village-new-construction.jpg",
         src: "/videos/valley-village-new-construction.mp4",
       },
-      {
-        title: "Biophilic Architecture, Explained",
-        thumbnail: "/images/video-thumb-biophilic-architecture.jpg",
-        src: "/videos/biophilic-architecture.mp4",
-      },
-      {
-        title: "What Is Sensory Minimalism?",
-        thumbnail: "/images/video-thumb-sensory-minimalism.jpg",
-        src: "/videos/sensory-minimalism.mp4",
-      },
-      {
-        title: "What Is Permanent Flexibility?",
-        thumbnail: "/images/video-thumb-permanent-flexibility.jpg",
-        src: "/videos/permanent-flexibility.mp4",
-      },
     ],
   },
 
