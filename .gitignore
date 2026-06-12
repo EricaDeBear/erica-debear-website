@@ -20,3 +20,7 @@ Thumbs.db
 
 # Next.js types (auto-generated)
 next-env.d.ts
+
+# Raw source assets (full-resolution photos/videos live in Drive, not the repo)
+/videos/
+/images/

@@ -1,9 +1,12 @@
 export const site = {
   /* ---------------- META / SEO ---------------- */
   meta: {
+    url: "https://ericadebear.com",
     title: "Erica DeBear | Your Next Move, Made Right",
+    titleTemplate: "%s | Erica DeBear Real Estate",
     description:
       "Erica DeBear is a licensed Los Angeles real estate broker specializing in the Eastside and Greater LA. Law-school educated, 75+ homes closed, 5.0 stars on Zillow.",
+    ogImage: "/og-image.jpg",
   },
 
   /* ---------------- BRAND ---------------- */
@@ -12,8 +15,6 @@ export const site = {
     nameLine1: "Erica DeBear",
     nameLine2: "Real Estate",
     tagline: "Your next move, made right.",
-    logo: "/placeholders/logo.svg",
-    logoLight: "/placeholders/logo-light.svg",
     logoImage: "/images/erica_logo_black.png",
     logoImageLight: "/images/erica_logo_white.png",
   },
@@ -57,7 +58,6 @@ export const site = {
       href: "/properties",
       children: [
         { label: "Current Listings", href: "/properties" },
-        { label: "Featured Sales", href: "/featured-sales" },
         { label: "Sold Portfolio", href: "/properties#sold" },
       ],
     },
@@ -70,7 +70,7 @@ export const site = {
 
   /* ---------------- HERO ---------------- */
   hero: {
-    image: "/images/hero.jpg",
+    image: "/images/hero-lemoyne-livingroom.jpg",
     eyebrow: "",
     heading1: "Your next move,",
     heading2: "made right.",
@@ -172,74 +172,6 @@ export const site = {
       "Some of the best homes in LA never reach the open market. Ask Erica what is available privately.",
     viewAll: { label: "View All Properties", href: "/properties" },
     searchAll: { label: "Search Every LA Listing", href: "/search" },
-    items: [
-      {
-        status: "For Sale",
-        address: "123 Example St",
-        cityZip: "Pasadena, CA 91101",
-        beds: 4,
-        baths: 3,
-        sqft: "2,800",
-        price: "$2,495,000",
-        image: "/placeholders/property-1.svg",
-        href: "/properties/example-1",
-      },
-      {
-        status: "For Sale",
-        address: "456 Sample Ave",
-        cityZip: "Highland Park, CA 90042",
-        beds: 5,
-        baths: 4,
-        sqft: "3,400",
-        price: "$3,250,000",
-        image: "/placeholders/property-2.svg",
-        href: "/properties/example-2",
-      },
-      {
-        status: "Active Under Contract",
-        address: "789 Placeholder Blvd",
-        cityZip: "Glassell Park, CA 90065",
-        beds: 3,
-        baths: 2,
-        sqft: "1,950",
-        price: "$1,795,000",
-        image: "/placeholders/property-3.svg",
-        href: "/properties/example-3",
-      },
-      {
-        status: "Pending",
-        address: "1010 Demo Dr",
-        cityZip: "South Pasadena, CA 91030",
-        beds: 4,
-        baths: 4,
-        sqft: "3,100",
-        price: "$2,895,000",
-        image: "/placeholders/property-4.svg",
-        href: "/properties/example-4",
-      },
-      {
-        status: "For Sale",
-        address: "2020 Sample St",
-        cityZip: "Mount Washington, CA 90065",
-        beds: 3,
-        baths: 3,
-        sqft: "2,200",
-        price: "$1,995,000",
-        image: "/placeholders/property-1.svg",
-        href: "/properties/example-5",
-      },
-      {
-        status: "For Sale",
-        address: "3030 Test Ln",
-        cityZip: "Glendale, CA 91201",
-        beds: 5,
-        baths: 5,
-        sqft: "4,200",
-        price: "$4,495,000",
-        image: "/placeholders/property-2.svg",
-        href: "/properties/example-6",
-      },
-    ],
   },
 
   /* ---------------- INSTAGRAM FOLLOW ---------------- */
@@ -249,10 +181,6 @@ export const site = {
     subheading: "Architecture, market reads, and the homes worth knowing about.",
     handle: "@ericadebear",
     href: "https://www.instagram.com/ericadebear/",
-    tiles: Array.from({ length: 8 }, (_, i) => ({
-      image: `/placeholders/insta-${(i % 4) + 1}.svg`,
-      href: "https://www.instagram.com/ericadebear/",
-    })),
   },
 
   /* ---------------- ABOUT / BIO BLURB (homepage) ---------------- */
@@ -270,24 +198,59 @@ export const site = {
     body: "Short videos on what is selling, what is sitting, and what to do about it, for buyers, sellers, and owners across LA.",
     items: [
       {
-        title: "What changed in the LA market this quarter",
-        thumbnail: "/placeholders/video-1.svg",
-        href: "#",
+        title: "Touring a 1937 Spanish Revival in Highland Park",
+        thumbnail: "/images/video-thumb-highland-park-spanish-revival.jpg",
+        src: "/videos/highland-park-spanish-revival.mp4",
       },
       {
-        title: "Eastside pricing: what buyers need to know",
-        thumbnail: "/placeholders/video-2.svg",
-        href: "#",
+        title: "Prepping a Listing for Open House Weekend",
+        thumbnail: "/images/video-thumb-open-house-prep.jpg",
+        src: "/videos/open-house-prep.mp4",
       },
       {
-        title: "When to sell and when to wait",
-        thumbnail: "/placeholders/video-3.svg",
-        href: "#",
+        title: "The Design Trends Defining LA Homes Right Now",
+        thumbnail: "/images/video-thumb-current-design-trends.jpg",
+        src: "/videos/current-design-trends.mp4",
       },
       {
-        title: "Buying your first home in LA",
-        thumbnail: "/placeholders/video-4.svg",
-        href: "#",
+        title: "The True Story of a Rental Nightmare",
+        thumbnail: "/images/video-thumb-rental-nightmare.jpg",
+        src: "/videos/rental-nightmare.mp4",
+      },
+      {
+        title: "If I Built a Home from Scratch",
+        thumbnail: "/images/video-thumb-build-from-scratch.jpg",
+        src: "/videos/build-from-scratch.mp4",
+      },
+      {
+        title: "If I Built a Home from Scratch, Part 2",
+        thumbnail: "/images/video-thumb-build-from-scratch-2.jpg",
+        src: "/videos/build-from-scratch-2.mp4",
+      },
+      {
+        title: "Touring a Santa Monica Condo",
+        thumbnail: "/images/video-thumb-santa-monica-condo.jpg",
+        src: "/videos/santa-monica-condo.mp4",
+      },
+      {
+        title: "Touring New Construction in Valley Village",
+        thumbnail: "/images/video-thumb-valley-village-new-construction.jpg",
+        src: "/videos/valley-village-new-construction.mp4",
+      },
+      {
+        title: "Biophilic Architecture, Explained",
+        thumbnail: "/images/video-thumb-biophilic-architecture.jpg",
+        src: "/videos/biophilic-architecture.mp4",
+      },
+      {
+        title: "What Is Sensory Minimalism?",
+        thumbnail: "/images/video-thumb-sensory-minimalism.jpg",
+        src: "/videos/sensory-minimalism.mp4",
+      },
+      {
+        title: "What Is Permanent Flexibility?",
+        thumbnail: "/images/video-thumb-permanent-flexibility.jpg",
+        src: "/videos/permanent-flexibility.mp4",
       },
     ],
   },
@@ -324,11 +287,11 @@ export const site = {
     ],
     awardsSubhead: "Awards earned over a multi-year track record.",
     awards: [
-      { year: "2025", title: "Platinum Award" },
-      { year: "2024", title: "Double Platinum Award" },
-      { year: "2023", title: "Double Platinum Award" },
-      { year: "2022", title: "Elliman Award" },
-      { year: "2021", title: "Elliman Award" },
+      { year: "2025", title: "Platinum Award", issuer: "Rise Real Estate | The Real Brokerage" },
+      { year: "2024", title: "Double Platinum Award", issuer: "Rise Real Estate | The Real Brokerage" },
+      { year: "2023", title: "Double Platinum Award", issuer: "Rise Real Estate | The Real Brokerage" },
+      { year: "2022", title: "Elliman Award", issuer: "Douglas Elliman" },
+      { year: "2021", title: "Elliman Award", issuer: "Douglas Elliman" },
     ],
   },
 

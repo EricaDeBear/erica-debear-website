@@ -20,8 +20,8 @@ export default function PropertiesPage() {
           </p>
         </div>
 
-        {/* RealScout Office Listings Widget */}
-        <div className="container-wide mb-24">
+        {/* RealScout Office Listings Widget — includes sold listings, anchor target for "Sold Portfolio" nav link */}
+        <div id="sold" className="container-wide mb-24 scroll-mt-32">
           {/* @ts-expect-error – RealScout web component */}
           <realscout-office-listings
             agent-encoded-id="QWdlbnQtMjY3MDA0"
