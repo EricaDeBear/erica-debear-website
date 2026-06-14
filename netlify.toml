@@ -1,0 +1,9 @@
+# Netlify build configuration for ericadebear.com
+# Pins the Node.js version so Netlify builds with the same version the site
+# is developed and tested against (Next.js 16 requires a modern Node).
+
+[build]
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "22"
