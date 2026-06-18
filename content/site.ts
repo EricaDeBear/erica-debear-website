@@ -386,6 +386,9 @@ export const site = {
   /* ---------------- FOOTER ---------------- */
   footer: {
     tagline: "Your next move, made right.",
+    /* Footer-only Quick Links, shown in addition to the main nav items.
+       Kept out of the top navigation on purpose. */
+    quickLinksExtra: [{ label: "FAQ", href: "/faq" }],
     legalLinks: [
       { label: "Terms of Use", href: "/terms" },
       { label: "Privacy Policy", href: "/privacy" },
