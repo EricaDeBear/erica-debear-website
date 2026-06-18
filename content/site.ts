@@ -298,6 +298,91 @@ export const site = {
     ],
   },
 
+  /* ---------------- FAQ ---------------- */
+  faq: {
+    overline: "Common Questions",
+    heading: "Questions, answered.",
+    intro:
+      "A straight look at how I work with sellers, buyers, and investors across the LA Eastside and Greater Los Angeles.",
+    groups: [
+      {
+        label: "For sellers",
+        items: [
+          {
+            question: "What makes the difference between an accepted offer and a closed sale?",
+            answer:
+              "More than most people expect. An accepted offer is the beginning of the hardest part, not the end. Inspection findings, appraisal gaps, financing conditions, and contingency deadlines are where deals quietly fall apart or where sellers leave money on the table. My focus is the post-offer stretch: holding a deal together through the renegotiation, protecting your price, and getting it to close on the terms you agreed to. It is the part of the job I am known for, and it is where experience shows.",
+          },
+          {
+            question: "How do you decide what my home should list for?",
+            answer:
+              "Pricing is part market data and part positioning. I look at recent comparable sales, current competition, and the specific features of your home, then we set a number with a strategy behind it rather than a guess. Staging and presentation factor in too, since how a home is shown affects what it sells for. I would rather price it right and position it well than chase a number that sits on the market and weakens your leverage.",
+          },
+          {
+            question: "Why does staging and presentation matter so much?",
+            answer:
+              "Buyers form an impression in the first few seconds, and that impression follows them through every showing and every offer. My background in fine arts and film production shapes how I approach this, composition, light, and how a space reads on camera and in person. Most buyers see the listing photos before they ever see the house, so the presentation is doing real work before anyone walks in.",
+          },
+          {
+            question: "Do you only work on the Eastside?",
+            answer:
+              "The Eastside is my anchor and where I have the deepest local knowledge, but I work across Greater Los Angeles, including the Valley and the Westside. If you are selling outside the Eastside, you still get the same approach.",
+          },
+        ],
+      },
+      {
+        label: "For buyers",
+        items: [
+          {
+            question: "I'm moving to LA from out of state. How do you help with that?",
+            answer:
+              "A long-distance move has more moving parts than a local one, and a lot of it is logistics and local knowledge you do not have yet. I help you understand the differences between areas, the realities of the buying process here, and what your budget actually gets you in different parts of the city, so you are making informed decisions rather than guessing from listings online. The goal is for you to land somewhere that fits how you actually want to live.",
+          },
+          {
+            question: "What should I look for in a listing agent versus a buyer's agent?",
+            answer:
+              "They are different jobs even when one person can do both. A listing agent works for the seller and represents their interests; a buyer's agent represents yours. When you are buying, you want someone whose attention is on your side of the table, especially during negotiation and the post-offer period when problems surface. I represent buyers across Greater Los Angeles and treat that part as seriously as I do my listings.",
+          },
+          {
+            question: "Can you work with first-time buyers, or only luxury clients?",
+            answer:
+              "Both. The price point does not change the care. First-time buyers often need more guidance through the process, which I am glad to give, and a vetted network of lenders, inspectors, and other professionals matters more, not less, when it is your first time. The experience should feel handled regardless of the number.",
+          },
+          {
+            question: "What does law-school educated mean for me as a client?",
+            answer:
+              "It means I read contracts closely and I am comfortable in the parts of a transaction that are detail-heavy and high-stakes. To be clear, I am a licensed broker associate, not a practicing attorney, and I do not give legal advice. What the legal education gives you is an agent who is rigorous about the paperwork and the contingencies, which is exactly where deals are won or lost.",
+          },
+        ],
+      },
+      {
+        label: "For investors",
+        items: [
+          {
+            question: "You invest in property yourself. How does that change how you work with investor clients?",
+            answer:
+              "I am the founder of a Los Angeles investment company with single-family and multifamily holdings, so I look at a property the way you do, as numbers that either work or do not. That means I am not just selling you on a house, I am thinking about what it returns, what it costs to hold, and what the realistic upside is. When an agent invests themselves, the conversation is different.",
+          },
+          {
+            question: "Do you handle multifamily, or just single-family?",
+            answer:
+              "Both. My own holdings include single-family and multifamily, and I work with investor clients across both. They are different analyses, and I am comfortable in each.",
+          },
+          {
+            question: "How do you evaluate whether a property is a good investment?",
+            answer:
+              "It comes down to the math behind the property, acquisition cost, the cost to hold and operate, realistic income, and the actual upside rather than the optimistic version. I would rather tell you a deal does not work than help you into one that does not. If you want to talk through a specific property or build a buying strategy, that is a conversation worth having directly.",
+          },
+        ],
+      },
+    ],
+    cta: {
+      heading: "Have a question that isn't here?",
+      label: "Connect with Erica",
+      href: "/contact",
+    },
+  },
+
   /* ---------------- FOOTER ---------------- */
   footer: {
     tagline: "Your next move, made right.",
