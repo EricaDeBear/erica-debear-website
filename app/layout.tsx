@@ -65,10 +65,14 @@ const jsonLd = {
   name: "Erica DeBear",
   url: site.meta.url,
   image: `${site.meta.url}/images/erica_headshot.jpg`,
+  description: site.seo.description,
   telephone: "+1-424-316-8801",
   email: site.contact.email,
   jobTitle: site.contact.title,
   identifier: site.contact.dre,
+  knowsAbout: site.seo.knowsAbout,
+  /* Education only: never a credential or license to practice law. */
+  alumniOf: { "@type": "EducationalOrganization", name: site.seo.alumniOf.name },
   address: {
     "@type": "PostalAddress",
     streetAddress: site.contact.address.line1,
@@ -80,6 +84,15 @@ const jsonLd = {
   areaServed: [
     { "@type": "City", name: "Los Angeles" },
     { "@type": "Place", name: "Greater Los Angeles, California" },
+    { "@type": "City", name: "Silver Lake" },
+    { "@type": "City", name: "Sherman Oaks" },
+    { "@type": "City", name: "Altadena" },
+    { "@type": "City", name: "Encino" },
+    { "@type": "City", name: "Pasadena" },
+    { "@type": "City", name: "El Sereno" },
+    { "@type": "City", name: "West Hollywood" },
+    { "@type": "City", name: "Santa Monica" },
+    { "@type": "City", name: "Burbank" },
   ],
   worksFor: {
     "@type": "RealEstateAgent",

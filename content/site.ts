@@ -9,6 +9,24 @@ export const site = {
     ogImage: "/og-image.jpg",
   },
 
+  /* ---------------- SEO / STRUCTURED DATA ----------------
+     Positioning fields consumed by the RealEstateAgent JSON-LD in
+     app/layout.tsx. Education only: "law-school educated" is the ceiling;
+     never a license or credential. */
+  seo: {
+    description:
+      "Erica DeBear is a law-school educated broker associate with The Rise Group at REAL Brokerage, with 12 years of experience and more than 75 homes closed. She is the founder of a Los Angeles property investment company with single-family and multifamily holdings, and brings a background in fine arts and film production to how she stages and positions properties. She specializes in post-offer negotiation across the LA Eastside and Greater Los Angeles.",
+    knowsAbout: [
+      "Post-offer contract negotiation",
+      "Real estate investment analysis",
+      "Single-family and multifamily property",
+      "Property staging and positioning",
+      "Luxury residential representation",
+      "LA Eastside real estate market",
+    ],
+    alumniOf: { type: "law school", name: "Law school", note: "Law-school educated" },
+  },
+
   /* ---------------- BRAND ---------------- */
   brand: {
     name: "Erica DeBear",
