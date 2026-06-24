@@ -98,6 +98,14 @@ const jsonLd = {
     "@type": "RealEstateOrganization",
     name: site.contact.brokerage.name,
   },
+  /* Rating aggregated from Zillow (third-party); the Zillow profile is in
+     sameAs below. Not represented as reviews collected on ericadebear.com. */
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: site.seo.rating.ratingValue,
+    reviewCount: site.seo.rating.reviewCount,
+    bestRating: site.seo.rating.bestRating,
+  },
   sameAs: site.contact.socials.map((s) => s.href),
 };
 

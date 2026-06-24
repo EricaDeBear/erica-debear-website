@@ -25,6 +25,15 @@ export const site = {
       "LA Eastside real estate market",
     ],
     alumniOf: { type: "law school", name: "Law school", note: "Law-school educated" },
+    /* Aggregate rating sourced from Zillow (a third-party platform), not from
+       reviews collected on this site. The Zillow profile is also in sameAs. */
+    rating: {
+      ratingValue: "5.0",
+      reviewCount: 19,
+      bestRating: "5",
+      source: "Zillow",
+      sourceUrl: "https://www.zillow.com/profile/Erica%20DeBear",
+    },
   },
 
   /* ---------------- BRAND ---------------- */
