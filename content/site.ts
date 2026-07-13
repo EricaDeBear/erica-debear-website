@@ -273,6 +273,48 @@ export const site = {
     coverageSubhead: "A selection of Erica’s recent listings and media coverage.",
     coverage: [
       {
+        outlet: "California Post",
+        date: "Jun 29, 2026",
+        headline: "‘Suicide Squad’ director asks $2.99M for lovingly decorated LA home with stained glass windows sourced from European churches",
+        href: "https://nypost.com/2026/06/29/real-estate/david-ayer-asks-2-99m-for-his-la-home/",
+      },
+      {
+        outlet: "AOL",
+        date: "2026",
+        headline: "‘Suicide Squad’ director asks $2.99M for lovingly decorated LA home with stained glass windows sourced from European churches",
+        href: "https://www.aol.com/articles/suicide-squad-director-asks-2-140000000.html",
+      },
+      {
+        outlet: "Haven Lifestyles",
+        date: "2026",
+        headline: "Filmmaker David Ayer Lists His Silver Lake Home for $2.995M",
+        href: "https://www.havenlifestyles.com/filmmaker-david-ayer-lists-his-silver-lake-home-for-2-995m/",
+      },
+      {
+        outlet: "Homes of Celebs",
+        date: "2026",
+        headline: "David Ayer Lists LA Home For $2.995 Million",
+        href: "https://homesofcelebs.com/david-ayer-lists-la-home-for-2-995-million/",
+      },
+      {
+        outlet: "Robb Report",
+        date: "2026",
+        headline: "‘Suicide Squad’ Director David Ayer Lists His Artsy L.A. Home for $3 Million",
+        href: "https://robbreport.com/shelter/celebrity-homes/david-ayer-los-angeles-home-1238445417/",
+      },
+      {
+        outlet: "Robb Report",
+        date: "2026",
+        headline: "David Ayer’s L.A. Home in Photos",
+        href: "https://robbreport.com/shelter/celebrity-homes/gallery/david-ayer-los-angeles-home-photos-1238447823/",
+      },
+      {
+        outlet: "Yahoo! Life",
+        date: "2026",
+        headline: "David Ayer’s L.A. Home in Photos",
+        href: "https://ca.style.yahoo.com/david-ayer-l-home-photos-215913186.html",
+      },
+      {
         outlet: "New York Post",
         date: "Aug 13, 2024",
         headline: "Suicide Squad director David Ayer lists LA home for $2.49M",
