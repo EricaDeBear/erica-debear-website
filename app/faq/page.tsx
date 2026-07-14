@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import { site } from "@/content/site";
 
 export const metadata: Metadata = {
-  title: "FAQ",
+  title: "LA Real Estate FAQ",
   description:
     "Answers to common questions about selling, buying, and investing in real estate with Erica DeBear across the LA Eastside and Greater Los Angeles.",
   alternates: { canonical: "/faq" },

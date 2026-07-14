@@ -8,7 +8,7 @@ export default function Hero() {
     <section className="relative w-full h-[100vh] min-h-[640px] flex items-center justify-center overflow-hidden">
       <Image
         src={image}
-        alt=""
+        alt="Los Angeles real estate broker Erica DeBear"
         fill
         priority
         sizes="100vw"

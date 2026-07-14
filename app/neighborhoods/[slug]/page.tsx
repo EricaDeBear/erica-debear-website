@@ -25,7 +25,7 @@ export async function generateMetadata({
   const area = areas.find((a) => a.slug === slug);
   if (!area) return {};
   return {
-    title: area.name,
+    title: `${area.name} Real Estate`,
     alternates: { canonical: `/neighborhoods/${area.slug}` },
   };
 }

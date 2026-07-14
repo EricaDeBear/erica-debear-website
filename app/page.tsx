@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import ScrollReveal from "@/components/ScrollReveal";
@@ -10,6 +11,12 @@ import InstagramFollow from "@/components/InstagramFollow";
 import AboutBlurb from "@/components/AboutBlurb";
 import MarketVideos from "@/components/MarketVideos";
 import Footer from "@/components/Footer";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: "Erica DeBear | LA Real Estate | Your Next Move, Made Right",
+  },
+};
 
 export default function Home() {
   return (

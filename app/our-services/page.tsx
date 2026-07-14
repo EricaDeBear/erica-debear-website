@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Services",
+  title: "Buyer & Seller Services",
   description:
     "How Erica DeBear works with sellers, buyers, first-time buyers, and investors across Greater Los Angeles, from preparation and pricing through closing.",
   alternates: { canonical: "/our-services" },
