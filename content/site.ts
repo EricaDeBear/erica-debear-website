@@ -435,17 +435,24 @@ export const site = {
   },
 
   /* ---------------- NEIGHBORHOODS (SILO) ----------------
-     Step 3 of the build: Silver Lake only, as the fully populated template
-     case. The other eight areas, the hub lead copy (overline / heading /
-     intro), and the sitemap and footer links are intentionally not added yet.
-     FLAGGED, missing from the content draft and left out rather than invented:
-       - hub overline / heading / intro (no hub copy exists in the draft)
-       - per area metaTitle / metaDescription (none written in the draft)
+     Nine areas across three regions. All copy is taken verbatim from the
+     content draft. FLAGGED, missing from the draft and left out rather than
+     invented:
+       - hub intro copy (no hub intro exists in the draft)
+       - per area metaTitle / metaDescription (page title falls back to name)
        - hero image src / alt (photography not sourced; images pending)
-     When the empty-stats areas are added later, keep the market shape
-     consistent (stats: [], plus scope and source present) and use tier2: ""
-     for the tier1-only area, so the union types stay accessible. */
+     Editorial notes in the draft were stripped rather than shipped: the
+     bracket markers ([MARKET DATA], [REGULATORY], [CONFIRM], [PHOTO]) and the
+     trailing "current figures to be supplied" drafting notes. Empty-stats
+     areas carry stats: [] with empty scope and source; the tier1-only area
+     carries tier2: "", so the render conditionals omit those blocks. */
   neighborhoods: {
+    /* Hub lead. overline and heading are the spec-provided structural labels;
+       no hub intro copy exists in the draft, so it is omitted rather than
+       invented. */
+    overline: "Greater Los Angeles",
+    heading: "Neighborhoods",
+
     /* Shared CTA rendered on every spoke. {name} is interpolated with the
        area name at render time. Mirrors faq.cta. */
     cta: {
@@ -519,6 +526,482 @@ export const site = {
           },
         ],
       },
+      {
+        slug: "el-sereno",
+        name: "El Sereno",
+        region: "Eastside",
+
+        overview:
+          "El Sereno sits at the eastern edge of Los Angeles, in the rolling hills between Highland Park, South Pasadena, and Alhambra. It is one of the oldest parts of the city, with a development history that runs back through Rancho Rosa de Castilla, and it carries a housing stock that reflects more than a century of building. For a long time it stayed off the radar of buyers focused on neighboring Eastside markets, which is part of why its character homes survived largely intact. It is a quieter market than Silver Lake or Highland Park, with hillside lots, views, and an early-20th-century building fabric that rewards a close look.",
+
+        architecture:
+          "El Sereno's housing stock is anchored by early-20th-century character homes: Craftsman bungalows, Spanish and Mediterranean Revival cottages, and storybook houses, with mid-century and postwar homes filling in the southern end of the neighborhood after World War II. The clearest concentration of architectural integrity is the El Sereno-Berkshire Craftsman District, a Historic Preservation Overlay Zone containing the Short Line Villa Tract, an early suburban tract that retains excellent examples of Craftsman, Bungalow, American Colonial Revival, and Spanish Colonial Revival design. The northern hills hold older homes on larger and irregular lots with views, while postwar Minimal Traditional and Ranch homes dominate parts of the south. More recently, hillside parcels have drawn newer infill and contemporary construction. The practical point for a buyer or seller is range and condition: an HPOZ Craftsman, a postwar Ranch, and a new hillside build are three different products with three different sets of considerations.",
+
+        market: {
+          intro:
+            "El Sereno has historically traded at a discount to adjacent Eastside markets, which has made it one of the areas where buyers priced out elsewhere look, and where appreciation has drawn attention. Within the neighborhood, the HPOZ blocks and the view-lot hillsides behave differently from the flatter postwar tracts.",
+          stats: [
+            { label: "Median sold price", value: "$808,500" },
+            { label: "Average days on market", value: "94" },
+            { label: "Sale-to-list ratio", value: "103.87%" },
+          ],
+          scope: "Single-family homes.",
+          source: "Combined LA Westside MLS",
+        },
+
+        activity: {
+          tier1:
+            "I represent buyers and sellers in El Sereno across its range, from historic Craftsman and Spanish homes to postwar and newer hillside construction.",
+          tier2:
+            "Recent El Sereno activity includes a single-family closing at $1.3M.",
+        },
+
+        guidance:
+          "Two considerations come up repeatedly here. The first is historic designation. If a home sits within the El Sereno-Berkshire HPOZ, exterior changes can be subject to review, which affects what a buyer can plan to alter and how a seller should present the home. Knowing whether a given property is a contributing structure in the overlay zone matters before, not after, an offer. The second is the spread between old and new. El Sereno's character homes are often a century old, and the inspection on a 1910s or 1920s house surfaces things a newer build will not. For a buyer that is where leverage lives in the post-offer window. For a seller it is better to know what the report will say in advance. On the hillside lots, the same slope, drainage, and access variables apply that I watch for across the Eastside.",
+
+        faq: [
+          {
+            question: "What kinds of homes does El Sereno have?",
+            answer:
+              "A deep early-20th-century layer: Craftsman bungalows, Spanish and Mediterranean Revival cottages, and storybook homes, with the strongest concentration in the El Sereno-Berkshire Craftsman historic district. Add postwar Ranch and Minimal Traditional homes in the south and newer contemporary infill on the hillsides, and the range is wide.",
+          },
+          {
+            question: "What is the El Sereno-Berkshire HPOZ and does it affect me?",
+            answer:
+              "It is a Historic Preservation Overlay Zone covering a notable concentration of intact Craftsman-era homes. If a property is inside it, exterior alterations may require review before permitting. That is not a reason to avoid these homes, but it should be understood up front, since it shapes what you can change and how the home should be marketed.",
+          },
+          {
+            question: "Why is El Sereno priced differently from neighboring areas?",
+            answer:
+              "Historically it has traded below adjacent Eastside markets, which is much of its draw for buyers and part of why its older homes survived intact. Current pricing and how fast it is moving are numbers worth looking at fresh rather than assuming, since this is an area where the gap has been narrowing.",
+          },
+          {
+            question: "What should I watch for buying an older home here?",
+            answer:
+              "The age of the housing stock. A century-old Craftsman or Spanish home can be wonderful and can also carry the systems, foundation, and condition questions that come with age. The inspection matters, and reading it correctly is where a buyer protects their position in the post-offer stretch.",
+          },
+          {
+            question: "Does El Sereno work for investors?",
+            answer:
+              "It can, but only the specific numbers decide it. I look at any property as an investor would, since I invest myself: acquisition cost, the cost to hold and improve, realistic income or resale, and the actual upside. The area's historic price gap and its older stock both cut into that math in ways worth working through on a real address.",
+          },
+        ],
+      },
+      {
+        slug: "altadena",
+        name: "Altadena",
+        region: "Eastside",
+
+        overview:
+          "Altadena sits in the foothills of the San Gabriel Mountains, just north of Pasadena, in unincorporated Los Angeles County. It is known for a deep stock of early-20th-century character homes and a strong preservation culture. In January 2025 the Eaton Fire caused significant loss across the community, and a large, organized rebuilding effort has been underway since. Any honest look at Altadena's market today has to hold both things at once: a historic foothill neighborhood with genuine architectural depth, and a community in active recovery. Buying or selling here now means understanding rebuild status, lot condition, and county process, alongside the usual questions of a home.",
+
+        architecture:
+          "Altadena's historic housing stock is defined by Craftsman bungalows, Spanish and Mediterranean Revival villas, English Tudor Revival, and the locally beloved Janes Cottages, the storybook English-cottage-style homes built in the 1920s by developer E.P. Janes and concentrated in Janes Village, designated an Altadena Heritage Area in 2002. Postwar Ranch and Mid-Century homes appear in later subdivisions. Because Altadena is in unincorporated county territory, it falls under Los Angeles County zoning and preservation jurisdiction rather than a city's. Following the 2025 fire, a documented rebuilding framework has taken shape: the Foothill Catalog and affiliated efforts have produced preapproved, code-compliant plans inspired by the area's historic styles, including several Janes Cottage designs preapproved by LA County to shorten permitting. For a buyer or seller the housing stock now spans intact historic homes that survived, homes being rebuilt to historic-inspired plans, vacant lots, and new construction, which is an unusually wide and situation-specific range.",
+
+        market: {
+          intro:
+            "Altadena's market is in a period of active change, and current figures should be read fresh and dated rather than assumed from any prior baseline. Standing historic homes, rebuild-in-progress properties, and vacant lots are effectively different products, and conflating them produces misleading averages.",
+          stats: [],
+          scope: "",
+          source: "",
+        },
+
+        activity: {
+          tier1:
+            "I represent buyers and sellers in Altadena and approach this market with care for where it is right now. Two of my differentiators matter unusually much here: a vetted network of the professionals a transaction or a rebuild actually requires, and an investor's discipline about whether to rebuild, sell as-is, or sell a lot. Those are real decisions for many owners here, and they turn on real numbers, not sentiment.",
+          tier2:
+            "Recent Altadena sales include three closings between $1.35M and $1.525M.",
+        },
+
+        guidance:
+          "Altadena right now calls for guidance most generalist marketing skips. For sellers, the central question is often rebuild versus sell, and the honest answer depends on insurance position, lot condition, permitting timeline, and what standing or rebuilt comparable homes are actually doing. That is an analysis, not a slogan, and it is one I am comfortable running because I look at property the way an investor does. For buyers, the considerations include county permitting and preservation process, the difference between a turnkey historic home and a rebuild-in-progress, and the condition and history of a given lot. Across both, the vetted-network point is not a tagline here: the right contractor, the right inspector, and clear-eyed advisors are part of what makes a sound decision possible.",
+
+        faq: [
+          {
+            question: "What kinds of homes does Altadena have?",
+            answer:
+              "Historically, Craftsman bungalows, Spanish and Mediterranean Revival villas, English Tudors, and the distinctive Janes Cottages of Janes Village, plus postwar Ranch and Mid-Century homes. After the 2025 fire, the market also includes homes being rebuilt to historic-inspired plans, vacant lots, and new construction.",
+          },
+          {
+            question: "How has the 2025 Eaton Fire changed the market?",
+            answer:
+              "Significantly, and it is still evolving. The housing stock now spans surviving historic homes, rebuilds in progress, and lots, which trade on different logic. Current figures should be looked at fresh and dated, not assumed. The most useful thing I can do here is help you read the specific situation of a specific property.",
+          },
+          {
+            question: "I own a lot or a damaged home. Should I rebuild or sell?",
+            answer:
+              "That depends on your insurance position, the lot, the permitting timeline, and what comparable standing and rebuilt homes are doing. It is a real financial analysis, and it is the kind of decision I am built to help with, because I evaluate property as an investor and I bring in the right professionals to pressure-test the numbers.",
+          },
+          {
+            question: "What is the Janes Cottage and why does it matter?",
+            answer:
+              "A storybook English-cottage-style home built in the 1920s by developer E.P. Janes, concentrated in Janes Village, an Altadena Heritage Area. Many were lost in the fire, and a documented set of preapproved, historic-inspired rebuild plans now exists to help owners recreate that character. If you are buying or rebuilding one, the style and any heritage considerations are part of the conversation.",
+          },
+          {
+            question: "Does Altadena fall under city or county rules?",
+            answer:
+              "County. Altadena is unincorporated, so Los Angeles County zoning, permitting, and preservation jurisdiction apply rather than a city's. That shapes process for both buyers and anyone rebuilding, and it is worth understanding before you transact.",
+          },
+        ],
+      },
+      {
+        slug: "pasadena",
+        name: "Pasadena",
+        region: "Eastside",
+
+        overview:
+          "Pasadena sits at the base of the San Gabriel Mountains, northeast of Downtown Los Angeles, and it is one of Southern California's most architecturally important cities. Founded in 1875, it grew quickly in the early 20th century into a center of the American Arts and Crafts movement, and that history is still legible in its streets today. It has more than 130 locally designated landmarks and historic monuments and dozens of historic districts, which makes it a city where, more than almost anywhere in the region, architectural designation and process are part of how homes are bought and sold.",
+
+        architecture:
+          "Pasadena is the city most associated with the California Craftsman and the bungalow, and its housing stock spans late Victorian, Arts and Crafts, Period Revival, early modern, and postwar eras. The Arts and Crafts peak is anchored by Greene and Greene, whose work includes the 1908 Gamble House, and the city's first historic district, Bungalow Heaven, preserves a sixteen-block concentration of early-20th-century Craftsman bungalows. Beyond it, districts like Garfield Heights, Historic Highlands, and others hold Craftsman homes alongside American Foursquares, Queen Annes, Spanish and Mediterranean Revival, Tudor Revival, and English Cottage styles, while areas like Linda Vista and the postwar Hastings Ranch tracts add mid-century inventory. Pasadena is also considered the birthplace of the bungalow court, with a documented study identifying well over a hundred courts citywide. The practical takeaway for a buyer or seller is that style, era, and historic status vary enormously block to block, and each combination carries its own ownership and transaction considerations.",
+
+        market: {
+          intro:
+            "Pasadena is a deep, sought-after market where historic character and condition carry real weight, and where landmark and historic-district status can factor into both value and process. Designated and non-designated homes, and homes across the city's many eras, behave differently.",
+          stats: [
+            { label: "Median sold price", value: "$1,472,500" },
+            { label: "Average days on market", value: "38" },
+            { label: "Sale-to-list ratio", value: "105.38%" },
+          ],
+          scope: "Single-family homes.",
+          source: "Combined LA Westside MLS",
+        },
+
+        activity: {
+          tier1:
+            "I represent buyers and sellers across Pasadena's range, from historic Craftsman and Period Revival homes to postwar and contemporary properties. The city's designation landscape and the age of much of its housing stock are exactly the kind of detail-heavy terrain where careful representation pays off, especially in the post-offer window.",
+          tier2:
+            "Recent Pasadena activity includes a closing at $771,000.",
+        },
+
+        guidance:
+          "Pasadena rewards knowing the rules. If a home is a designated landmark, a historic monument, or a contributing property in a historic district, certain exterior changes can require a Certificate of Appropriateness before a building permit issues, while interior work is generally exempt. That affects what a buyer can plan and how a seller should position a home. Pasadena also uses the State Historical Building Code, which can allow reasonable alternatives to standard code for historic homes, and eligible designated properties may qualify for Mills Act property-tax savings, which is a genuine financial factor worth checking on a specific home. Underneath all of it is the age of the stock: many of these homes are a century old, the inspection matters, and that is where I focus in the post-offer stretch.",
+
+        faq: [
+          {
+            question: "What architectural styles will I find in Pasadena?",
+            answer:
+              "A wide span: Craftsman and California Bungalow, Greene and Greene Arts and Crafts, American Foursquare, Queen Anne, Spanish and Mediterranean Revival, Tudor Revival, English Cottage, Ranch, and Mid-Century Modern. Pasadena is also known for its bungalow courts, with well over a hundred documented citywide.",
+          },
+          {
+            question: "What is a Certificate of Appropriateness and will I need one?",
+            answer:
+              "In Pasadena's landmark and historic districts, visible exterior changes such as windows, porches, additions, and fences may require a Certificate of Appropriateness before a permit is issued. Interior alterations are generally exempt. If you are buying in a historic district, this shapes what you can change and how quickly projects move, so it is worth understanding before you write an offer.",
+          },
+          {
+            question: "What is the Mills Act and could it save me money?",
+            answer:
+              "The Mills Act is a program that can create meaningful property-tax savings for eligible designated historic properties in exchange for their preservation. Whether a specific home qualifies, and what the savings would be, is worth checking property by property. For the right buyer it is a real financial consideration, not just a preservation nicety.",
+          },
+          {
+            question: "Is buying a historic home in Pasadena more complicated?",
+            answer:
+              "It can come with more to understand: designation status, review process for exterior changes, and the realities of an older home's systems and condition. None of it is a barrier with the right guidance. Pasadena even uses the State Historical Building Code, which can allow sensible alternatives to standard code for historic homes. The key is knowing what you are buying before you commit.",
+          },
+          {
+            question: "How does Measure ULA affect a Pasadena sale?",
+            answer:
+              "Measure ULA is the City of Los Angeles transfer tax and applies to property within the City of Los Angeles. Pasadena is its own incorporated city, so a sale there is treated differently. Either way, every cost that comes out of a sale should be in your net-proceeds math from the start.",
+          },
+        ],
+      },
+      {
+        slug: "sherman-oaks",
+        name: "Sherman Oaks",
+        region: "Valley",
+
+        overview:
+          "Sherman Oaks sits in the southern San Fernando Valley, organized around the Ventura Boulevard corridor and reaching from the valley floor up into the Santa Monica Mountains foothills to the south. It was platted in 1927 by General Moses Hazeltine Sherman, whose company subdivided roughly a thousand acres of former ranch and orchard land into the residential tract that took his name. Today it is one of the Valley's anchor markets, known for a walkable boulevard, a wide architectural range, and a clear split in character between the flatter streets north of Ventura and the larger-lot hillside streets to the south.",
+
+        architecture:
+          "Sherman Oaks has more architectural variety than many of its Valley neighbors. The housing stock includes California Craftsman bungalows, Spanish Revival small-lot homes, the postwar California Ranch homes that defined the Valley's mid-century build-out, and a strong layer of mid-century modern, with the San Fernando Valley being a major and sometimes overlooked center of postwar modernism. Architect Edward Fickett, prolific across the Valley, is associated with the area's mid-century character, and individual modernist homes by noted architects appear in the hills. Geography splits the stock: the flats north of Ventura hold tighter-lot single-family homes with smaller footprints, while the streets between Ventura and Mulholland to the south carry larger-lot and hillside inventory, including custom and view homes. There has also been significant flip and rebuild activity along the Ventura corridor. For a buyer or seller the north-south distinction is one of the first things that matters.",
+
+        market: {
+          intro:
+            "Sherman Oaks is a steady, in-demand Valley market that draws a varied buyer pool, including buyers priced out of the Westside. The southern larger-lot and hillside tier and the northern smaller-lot tier move differently, and well-priced inventory can see real competition.",
+          stats: [
+            { label: "Median sold price", value: "$1,655,000" },
+            { label: "Average days on market", value: "51" },
+            { label: "Sale-to-list ratio", value: "98.17%" },
+          ],
+          scope: "Single-family homes.",
+          source: "Combined LA Westside MLS",
+        },
+
+        activity: {
+          tier1:
+            "I represent buyers and sellers throughout Sherman Oaks, on both sides of Ventura and across its range from character homes to mid-century and contemporary properties. Knowing how the northern and southern tiers price and move differently is the kind of local detail that changes a strategy, and the post-offer stretch is where I concentrate.",
+          tier2:
+            "Recent Sherman Oaks activity includes a closing at $883,000.",
+        },
+
+        guidance:
+          "The first thing I want a Sherman Oaks buyer or seller to be clear on is which Sherman Oaks they are in. A tighter-lot home in the flats north of Ventura and a larger-lot or hillside home to the south are different products with different buyer pools and different pricing logic, and treating them the same is a common mistake. On the hillside streets to the south, the slope, foundation, drainage, and access variables I watch across hillside LA apply. On the flats, lot size, proximity to the Ventura corridor, and the condition of an often mid-century home drive the conversation. For sellers, pricing to the right tier and presenting to the right buyer is most of the work; for buyers, it is reading condition and the post-offer findings correctly.",
+
+        faq: [
+          {
+            question: "What kinds of homes are in Sherman Oaks?",
+            answer:
+              "A genuine mix: Craftsman bungalows, Spanish Revival, postwar California Ranch, and mid-century modern, plus newer custom and contemporary builds. The Valley is a significant center of mid-century architecture, and Sherman Oaks reflects that.",
+          },
+          {
+            question: "What is the difference between north and south of Ventura?",
+            answer:
+              "Broadly, the flats north of Ventura have tighter lots and smaller home footprints, while the streets to the south, between Ventura and Mulholland, have larger lots, hillside parcels, and more view and custom homes. They price and compete differently, so which side you are on is one of the first things to establish.",
+          },
+          {
+            question: "Is Sherman Oaks a good market for a Westside-priced-out buyer?",
+            answer:
+              "It is one of the markets such buyers commonly look to, offering more home and lot for the money than comparable Westside areas while keeping strong access to the city. What that trade looks like in specific numbers is worth pulling fresh rather than assuming.",
+          },
+          {
+            question: "What should I watch for on a hillside home in the south?",
+            answer:
+              "The same variables that apply on hillsides across LA: slope stability, foundation, drainage, and access. They surface in inspection, which is exactly where a buyer protects their position and where I focus during the post-offer window.",
+          },
+          {
+            question: "How does Measure ULA affect a Sherman Oaks sale?",
+            answer:
+              "Sherman Oaks is within the City of Los Angeles, so the Measure ULA transfer tax can apply to sales above its threshold, which the larger southern homes can reach. If your sale may cross it, it belongs in your net-proceeds math from the start.",
+          },
+        ],
+      },
+      {
+        slug: "encino",
+        name: "Encino",
+        region: "Valley",
+
+        overview:
+          "Encino sits in the southern San Fernando Valley, just west of Sherman Oaks, and is the larger-lot, more estate-oriented of the two anchor markets. Where Sherman Oaks is organized around a walkable boulevard, Encino is more residential in character, with generous lots, a concentration south of Ventura Boulevard, and a long association with established Valley homeownership. It draws a buyer pool that overlaps with Sherman Oaks but skews toward those seeking more land and a more private, estate-scale setting.",
+
+        architecture:
+          "Encino's housing stock skews to larger-scale single-family homes on bigger lots, often 7,000 to 15,000 square feet and well beyond. The area south of Ventura holds significant 1950s to 1970s mid-century and postwar Ranch homes, alongside original 1920s and 1930s Spanish Colonial and Mediterranean estate inventory. Over the past decade there has been significant rebuild activity, with many original homes reconfigured or replaced as contemporary estate-scale houses on the larger lots. North of Ventura, lots are generally smaller and homes move at a somewhat faster pace. The result is a market where lot size and whether a home is original, renovated, or a recent rebuild are central variables.",
+
+        market: {
+          intro:
+            "Encino is a prestige Valley market with steady demand, including from multi-generational Valley households and buyers priced out of the Westside. Larger-lot homes south of Ventura and smaller-lot homes to the north behave differently, and well-priced inventory in the prized tiers can see multiple offers. A meaningful share of higher-tier activity happens off-market.",
+          stats: [
+            { label: "Median sold price", value: "$2,362,500" },
+            { label: "Average days on market", value: "62" },
+            { label: "Sale-to-list ratio", value: "96.38%" },
+          ],
+          scope: "Single-family homes.",
+          source: "Combined LA Westside MLS",
+        },
+
+        activity: {
+          tier1:
+            "I represent buyers and sellers in Encino across its range, from original Spanish and mid-century homes to renovated and estate-scale contemporary properties. In a market where a meaningful amount of the best activity is off-market, relationships and a vetted network matter, and the post-offer discipline I am known for protects the larger sums at stake on higher-value homes.",
+          tier2:
+            "Recent Encino activity includes a single-family closing at $1.225M.",
+        },
+
+        guidance:
+          "In Encino, lot and provenance lead the conversation. A larger lot south of Ventura, an original 1930s Spanish estate, a renovated mid-century, and a recent ground-up rebuild are different propositions, and pricing or buying them without that distinction is where money is lost. Because a real share of the upper-tier market moves off-market through networks, a seller benefits from genuine reach and a buyer from genuine access, which is part of what a vetted network and active local relationships provide. On the higher-value homes, the dollars that move in the post-offer window are larger, which is exactly why I treat inspections, contingencies, and renegotiation as the part of the deal that decides the outcome.",
+
+        faq: [
+          {
+            question: "What kinds of homes does Encino have?",
+            answer:
+              "Larger-scale single-family homes on generous lots: 1950s to 1970s mid-century and Ranch homes, original 1920s and 1930s Spanish Colonial and Mediterranean estates, and a growing number of contemporary estate-scale rebuilds, especially south of Ventura.",
+          },
+          {
+            question: "How is Encino different from Sherman Oaks?",
+            answer:
+              "Broadly, Encino is the larger-lot, more estate-oriented and residential market, while Sherman Oaks is more walkable and boulevard-centered with a more varied and sometimes tighter-lot stock. They compete for overlapping buyers, so the choice often comes down to lot size, setting, and daily rhythm.",
+          },
+          {
+            question: "A lot of homes here are rebuilds. Does that matter?",
+            answer:
+              "It does. An original estate, a renovated older home, and a ground-up contemporary rebuild carry different conditions, different value drivers, and different things to check. Knowing which one you are looking at, and what was actually done in a rebuild or renovation, is central to both buying and pricing here.",
+          },
+          {
+            question: "Is it true a lot of Encino sells off-market?",
+            answer:
+              "A meaningful share of higher-tier activity does happen off-market through networks. For a seller that is a reason to work with someone with genuine reach; for a buyer, a reason to work with someone with genuine access. Relationships do real work in this market.",
+          },
+          {
+            question: "How does Measure ULA affect an Encino sale?",
+            answer:
+              "Encino is within the City of Los Angeles, so the Measure ULA transfer tax can apply above its threshold, which Encino's estate-scale homes frequently reach. On higher-value sales this is a material number and belongs in your net-proceeds planning from day one.",
+          },
+        ],
+      },
+      {
+        slug: "burbank",
+        name: "Burbank",
+        region: "Valley",
+
+        overview:
+          "Burbank sits at the eastern edge of the San Fernando Valley, between the Verdugo and Santa Monica mountains, about thirteen miles north of Downtown Los Angeles. It is its own incorporated city, not part of the City of Los Angeles, which matters for everything from permitting to transfer taxes. Long known as a center of the entertainment and, historically, aircraft industries, Burbank pairs a stable, well-kept residential fabric on the valley floor with hillside homes in the Burbank Hills, and a walkable character district in Magnolia Park.",
+
+        architecture:
+          "Burbank's valley-floor housing stock is anchored by single-story California Ranch homes and bungalows, with some homes dating to the 1920s and a major build-out during the postwar period, when the GI Bill and the booming aircraft industry at Lockheed accelerated suburban housing. The city's historic-preservation materials document common types including late California Bungalow, Period Revival (Spanish and English/Tudor), early California Ranch, and a smaller number of Streamline Moderne homes. Magnolia Park, on the west side, began as a 1920s planned homes-and-shopping development and is known today for 1930s and 1940s storybook cottages, Craftsman-influenced bungalows, Spanish Revival, and Tudor Revival homes, many keeping period exteriors over updated interiors, with ADUs now common. The Burbank Hills hold larger and more architectural homes, including gated enclaves. For a buyer or seller the through-line is a generally well-preserved early-to-mid-20th-century stock, with character concentrated in pockets like Magnolia Park.",
+
+        market: {
+          intro:
+            "Burbank is a steady, in-demand market valued for its location, its school district, and its proximity to the studios, and it has historically been more attainable than much of the Westside while still well above national norms. Magnolia Park character homes, valley-floor Ranch homes, and Burbank Hills properties form distinct tiers.",
+          stats: [],
+          scope: "",
+          source: "",
+        },
+
+        activity: {
+          tier1:
+            "I represent buyers and sellers across Burbank, from Magnolia Park character homes to valley-floor Ranch homes and Burbank Hills properties. Because Burbank is its own city with its own process, knowing how a transaction here differs from one in the City of Los Angeles is part of representing it well, and the post-offer stretch remains where I focus.",
+          tier2: "",
+        },
+
+        guidance:
+          "The most important structural fact in Burbank is that it is its own incorporated city. Permitting, local rules, and transfer taxes follow Burbank's framework, not the City of Los Angeles's, and the Measure ULA transfer tax that applies inside the City of LA does not apply to a Burbank sale. Beyond that, the guidance is tier-specific. In Magnolia Park, period character and the condition behind an updated interior matter, and ADUs are common enough to be part of value conversations. On the valley floor, the mid-century Ranch stock and lot specifics lead. In the hills, the usual slope and access considerations apply. Across all of them I treat the inspection and the post-offer window as where the outcome is decided.",
+
+        faq: [
+          {
+            question: "What kinds of homes does Burbank have?",
+            answer:
+              "Primarily single-story California Ranch homes and bungalows on the valley floor, with some 1920s homes, plus Period Revival Spanish and Tudor homes and a smaller number of Streamline Moderne. Magnolia Park adds 1930s and 1940s storybook cottages, Craftsman bungalows, and Spanish and Tudor Revival homes. The Burbank Hills hold larger and more architectural properties.",
+          },
+          {
+            question: "What makes Magnolia Park distinct?",
+            answer:
+              "It started as a 1920s planned homes-and-shopping development and retains a concentration of character homes from the 1930s and 1940s, many with preserved period exteriors and updated interiors, alongside a walkable boulevard of independent shops. ADUs are common, which can factor into value and use.",
+          },
+          {
+            question: "Does Measure ULA apply to a Burbank sale?",
+            answer:
+              "Burbank is its own city, separate from the City of Los Angeles, so the City of LA's Measure ULA transfer tax does not apply the way it would on a sale inside LA city limits. The exact transfer-tax treatment is worth confirming for your specific sale, but the headline is that Burbank is governed by its own framework.",
+          },
+          {
+            question: "Why do so many buyers want Burbank specifically?",
+            answer:
+              "Common reasons include its proximity to the major studios, its school district, and a location with strong access to the rest of the region, often at prices more attainable than comparable Westside areas. What that looks like in current numbers is worth pulling fresh.",
+          },
+          {
+            question: "I want a home with an ADU or ADU potential. Is Burbank good for that?",
+            answer:
+              "ADUs are already common in areas like Magnolia Park, and ADU potential is a frequent part of the value conversation here. Whether a specific property can add or already has a compliant ADU depends on the lot and Burbank's rules, which is worth checking property by property.",
+          },
+        ],
+      },
+      {
+        slug: "west-hollywood",
+        name: "West Hollywood",
+        region: "Westside",
+
+        overview:
+          "West Hollywood is a small, dense, independent city wedged between Beverly Hills, Hollywood, and the Hollywood Hills, with its own government, its own rules, and a housing character distinct from the City of Los Angeles around it. It is known for one of the region's richest concentrations of 1920s courtyard apartments and Spanish Revival design, a largely multifamily and condo housing fabric, and a strong rent-control framework. For buyers and sellers it is a market where the property type, condominium versus income property versus the rarer single-family home, and the city's own regulations drive the conversation.",
+
+        architecture:
+          "West Hollywood's signature housing type is the 1920s courtyard apartment, and the city protects a notable concentration of them, including a Courtyard Thematic District, where period-revival buildings arrange individual units around shared landscaped outdoor space. The Fountain corridor in particular holds elaborate courtyard designs, and celebrated examples like the Zwebell-designed Spanish and Andalusian courtyard buildings date to the mid-1920s. Beyond the courtyards, the stock runs to Spanish Revival bungalows and bungalow courts, mid-century apartment buildings and individual modernist homes by noted architects, and later condominium development, with single-family houses comparatively scarce and concentrated in specific pockets. Some historic buildings are individually significant and, where designated, may carry Mills Act tax considerations. The practical point is that West Hollywood is largely a multifamily and condo city with a deep historic apartment fabric, which shapes nearly every transaction.",
+
+        market: {
+          intro:
+            "West Hollywood is a desirable, supply-constrained Westside-adjacent market dominated by condominiums and income properties, with single-family homes a scarce and premium segment. Condos, multifamily income buildings, and the rare house behave as distinct markets. Rent-control status materially affects the value and analysis of income property.",
+          stats: [
+            { label: "Median sold price", value: "$2,495,065" },
+            { label: "Average days on market", value: "65" },
+            { label: "Sale-to-list ratio", value: "97.73%" },
+          ],
+          scope:
+            "Single-family homes only (a thin slice of a mostly-condo market; read alongside condo activity).",
+          source: "Combined LA Westside MLS",
+        },
+
+        activity: {
+          tier1:
+            "I represent buyers and sellers in West Hollywood across its condo, income-property, and single-family segments. The city's own regulatory framework and its heavily multifamily stock are exactly the kind of terrain where careful, detail-oriented representation matters, and where my investor's lens is useful on the income-property side. The post-offer discipline I am known for applies across all of it.",
+          tier2:
+            "Recent West Hollywood sales include three condominium closings between $715,000 and $941,444, in the multifamily stock that defines the area.",
+        },
+
+        guidance:
+          "Two things define guidance in West Hollywood. First, it is its own city with its own rules, including a significant rent-control framework, so a transaction here does not follow City of Los Angeles regulations, and an income property's tenancies and rent-regulated status are central to its value, not a footnote. For an investor that analysis is the deal. Second, much of the stock is historic multifamily, where building condition, HOA health on condos, and any historic designation (which can bring both review requirements and potential Mills Act savings) all matter. I look at income property the way an investor does, since I invest myself, and on every property type I treat the inspection and the post-offer window as where the outcome is protected.",
+
+        faq: [
+          {
+            question: "What kinds of homes does West Hollywood have?",
+            answer:
+              "Predominantly condominiums and multifamily income properties, with a deep stock of 1920s Spanish Revival courtyard apartments, bungalow courts, mid-century apartment buildings, and individual modernist homes. Single-family houses exist but are comparatively scarce and concentrated in certain pockets.",
+          },
+          {
+            question: "Is West Hollywood mostly condos and apartments?",
+            answer:
+              "Largely, yes. It is a dense, largely multifamily and condo city with a celebrated historic apartment fabric. That shapes what is available, how it is priced, and what you are analyzing, whether you are buying a place to live or an income property.",
+          },
+          {
+            question: "How does rent control affect buying income property here?",
+            answer:
+              "Significantly. West Hollywood has its own rent-control framework, and a building's existing tenancies and rent-regulated status are central to its value and its math. For an investor this is the heart of the analysis, and it is the kind of evaluation I run as someone who invests in property myself. Current specifics should be confirmed for the building in question.",
+          },
+          {
+            question: "Does West Hollywood follow City of Los Angeles rules?",
+            answer:
+              "No. West Hollywood is its own incorporated city with its own government and regulations. That affects process, local rules, and how some taxes and tenant protections work, which is why local knowledge of West Hollywood specifically matters here.",
+          },
+          {
+            question: "What is a courtyard apartment and why does it come up so often?",
+            answer:
+              "It is a 1920s-rooted housing type where individual units arrange around a shared landscaped courtyard, and West Hollywood has one of the region's best concentrations, some in a protected thematic district. If you are buying one as a residence or an investment, its historic status and any associated requirements or tax programs are part of the picture.",
+          },
+        ],
+      },
+      {
+        slug: "santa-monica",
+        name: "Santa Monica",
+        region: "Westside",
+
+        overview:
+          "Santa Monica is a coastal city on the western edge of Los Angeles County, independent of the City of Los Angeles, with its own government and a strong regulatory framework. It pairs some of the region's most valuable residential real estate with a dense and historically significant stock of apartments and courtyard housing, and it operates one of California's more established rent-control regimes. The market splits sharply by geography and by property type, from estate-scale homes north of Montana to condos and income properties closer to the core, which makes knowing which Santa Monica you are in essential.",
+
+        architecture:
+          "Santa Monica's housing stock spans early-20th-century single-family homes, including 1920s Spanish-style bungalows in enclaves like Sunset Park, and a deep and historically important body of multifamily housing. As the region's population boomed in the 1920s, single-family homes and tourist hotels gave way to duplexes, bungalow courts, and apartment buildings, and the city retains a significant collection of bungalow courts citywide along with notable courtyard-apartment concentrations such as the San Vicente Courtyard Apartments Historic District, where Streamline Moderne, Hollywood Regency, Vernacular Modern, and Minimal Traditional buildings arrange units around shared landscaped courtyards. The single-family tiers range from estate-scale homes north of Montana to more modest homes in areas like Sunset Park and the Pico neighborhood. The result is a market with two strong and distinct halves: high-value single-family in defined enclaves, and a deep historic multifamily fabric, much of it rent-regulated.",
+
+        market: {
+          intro:
+            "Santa Monica is among the region's most valuable and supply-constrained coastal markets, with sharp differences by tier. North of Montana single-family, other single-family enclaves, condos, and rent-regulated income property each behave as their own market. Rent-control status materially affects income-property value.",
+          stats: [],
+          scope: "",
+          source: "",
+        },
+
+        activity: {
+          tier1:
+            "I represent buyers and sellers in Santa Monica across its single-family, condo, and income-property segments. A market this tiered and this regulated rewards precise representation, and my investor's lens is directly useful on the rent-regulated income-property side. As everywhere, I treat the post-offer window as where the deal is protected, and the larger sums in this market make that discipline matter more.",
+          tier2:
+            "Recent Santa Monica activity includes a condominium closing at $842,900.",
+        },
+
+        guidance:
+          "Santa Monica guidance starts with two facts. First, it is its own city with its own strong regulatory and rent-control framework, so transactions do not follow City of Los Angeles rules, and on income property the tenancies and rent-regulated status are central to value rather than incidental. For an investor, that is the analysis. Second, the single-family market is sharply tiered, and an estate north of Montana, a Sunset Park bungalow, and a condo near the core are different markets that should not be priced or shopped interchangeably. Layer in a deep historic multifamily fabric, where building condition, any historic designation, and rent regulation all bear on value, and the need for genuinely local, property-type-specific guidance is clear. I evaluate income property as an investor would, since I invest myself, and across every type I concentrate on the inspection and the renegotiation that follow an accepted offer.",
+
+        faq: [
+          {
+            question: "What kinds of homes does Santa Monica have?",
+            answer:
+              "A wide range across two strong halves: single-family homes from 1920s Spanish bungalows in areas like Sunset Park to estate-scale houses north of Montana, and a deep historic multifamily stock of bungalow courts and courtyard apartments, much of it rent-regulated.",
+          },
+          {
+            question: "What does \"north of Montana\" mean for pricing?",
+            answer:
+              "North of Montana is one of Santa Monica's most valuable single-family enclaves, and it prices well above other tiers in the city. Because the market is so tiered, an estate there, a Sunset Park home, and a condo near the core are effectively different markets, and lumping them together produces misleading numbers.",
+          },
+          {
+            question: "How does rent control affect buying income property here?",
+            answer:
+              "Substantially. Santa Monica has one of California's more established rent-control frameworks, and an income building's existing tenancies and rent-regulated status are central to its value and its math. That analysis is the deal for an investor, and it is the kind of evaluation I run as a property investor myself. Confirm current specifics for the building in question.",
+          },
+          {
+            question: "Does Santa Monica follow City of Los Angeles rules?",
+            answer:
+              "No. Santa Monica is its own incorporated city with its own government, regulations, and rent-control regime. The City of Los Angeles's rules, including Measure ULA, do not govern a Santa Monica transaction, though Santa Monica has its own framework to understand. Local, city-specific knowledge matters here.",
+          },
+          {
+            question: "Is Santa Monica only for ultra-high-end buyers?",
+            answer:
+              "No. While north of Montana and the coastal tiers are among the region's priciest, the city also has more modest single-family enclaves and a large stock of condos and apartments. The range is wide, and the right starting point is the tier and property type that fit your goals.",
+          },
+        ],
+      },
     ],
   },
 
@@ -527,7 +1010,10 @@ export const site = {
     tagline: "Your next move, made right.",
     /* Footer-only Quick Links, shown in addition to the main nav items.
        Kept out of the top navigation on purpose. */
-    quickLinksExtra: [{ label: "FAQ", href: "/faq" }],
+    quickLinksExtra: [
+      { label: "FAQ", href: "/faq" },
+      { label: "Neighborhoods", href: "/neighborhoods" },
+    ],
     legalLinks: [
       { label: "Terms of Use", href: "/terms" },
       { label: "Privacy Policy", href: "/privacy" },
