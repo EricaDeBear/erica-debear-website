@@ -434,6 +434,94 @@ export const site = {
     },
   },
 
+  /* ---------------- NEIGHBORHOODS (SILO) ----------------
+     Step 3 of the build: Silver Lake only, as the fully populated template
+     case. The other eight areas, the hub lead copy (overline / heading /
+     intro), and the sitemap and footer links are intentionally not added yet.
+     FLAGGED, missing from the content draft and left out rather than invented:
+       - hub overline / heading / intro (no hub copy exists in the draft)
+       - per area metaTitle / metaDescription (none written in the draft)
+       - hero image src / alt (photography not sourced; images pending)
+     When the empty-stats areas are added later, keep the market shape
+     consistent (stats: [], plus scope and source present) and use tier2: ""
+     for the tier1-only area, so the union types stay accessible. */
+  neighborhoods: {
+    /* Shared CTA rendered on every spoke. {name} is interpolated with the
+       area name at render time. Mirrors faq.cta. */
+    cta: {
+      heading: "Thinking about buying or selling in {name}?",
+      label: "Connect with Erica",
+      href: "/contact",
+    },
+
+    /* Region grouping for the hub (built later). Order: Eastside first. */
+    regions: ["Eastside", "Valley", "Westside"],
+
+    areas: [
+      {
+        slug: "silver-lake",
+        name: "Silver Lake",
+        region: "Eastside",
+
+        overview:
+          "Silver Lake sits in the hills northeast of Downtown, built around the reservoir that gives the neighborhood its name. The terrain is the reason the architecture is what it is. The slopes around the water were too steep for the gridded tract housing going up elsewhere in early Los Angeles, so the lots here drew architects who treated a hillside as a problem worth solving rather than avoiding. The result is one of the most architecturally significant concentrations of homes in the city, and a market that rewards knowing the difference between one street and the next.",
+
+        architecture:
+          "Silver Lake's streets were largely laid out in the 1920s, following the contours of the hills, which is why no two blocks feel quite the same. The earliest residential layer is 1920s Spanish and Mediterranean Revival, much of it clustered in the Moreno Highlands on the western slopes. The layer the neighborhood is known for came next: the modernist hillside houses that made Silver Lake a testing ground for how Californians could live on difficult land. Richard Neutra built his own home and studio, the VDL Research House, on the eastern edge of the reservoir in 1932, and the surrounding Neutra Colony added a cluster of his houses through the 1940s and 50s. Rudolph Schindler worked the eastern side, John Lautner built Silvertop, and Gregory Ain's Avenel cooperative is listed on the National Register of Historic Places. Alongside the icons, the housing stock runs to hillside view properties, modest-footprint modern houses built tight to their lots, creative duplexes, small-lot developments, and contemporary new builds. For a buyer or seller, the practical takeaway is that Silver Lake is not one market. An architecturally significant home, a 1920s Spanish, and a new-construction small-lot house are three different transactions, priced and positioned differently.",
+
+        market: {
+          intro:
+            "Silver Lake tends to behave as a low-inventory, design-driven market, where a home's architectural pedigree and condition can matter as much as its square footage. Significant homes by named architects trade on a different logic than standard stock, and the spread between a turnkey design property and one needing work can be wide.",
+          stats: [
+            { label: "Median sold price", value: "$1,485,500" },
+            { label: "Average days on market", value: "40" },
+            { label: "Sale-to-list ratio", value: "105.81%" },
+          ],
+          scope: "Single-family homes.",
+          source: "Combined LA Westside MLS",
+        },
+
+        activity: {
+          tier1:
+            "I represent both buyers and sellers in Silver Lake and work across its range, from architecturally significant homes to contemporary small-lot construction. The post-offer stretch is where I focus: holding a deal together through inspections and renegotiation, which matters more, not less, on hillside properties and older homes where what the inspection turns up can move real money.",
+          tier2:
+            "Recent Silver Lake sales include two closings between $1.65M and $2.05M.",
+        },
+
+        guidance:
+          "Two things shape almost every Silver Lake transaction. The first is the hillside itself. Slope, foundation, drainage, and access are real variables here, and they surface in inspection. A buyer should expect to read a hillside inspection carefully, and a seller is better served knowing what the report will likely say before it is in a buyer's hands, not after. The second is architectural provenance. If a home is by a named architect or sits in a historic context, that changes how it should be priced, marketed, and sometimes what can be altered. Pricing a significant home like standard stock leaves money on the table; pricing standard stock as if it were significant leaves it on the market. Knowing which one you have, and representing it accordingly, is most of the job here.",
+
+        faq: [
+          {
+            question: "What kinds of homes will I actually find in Silver Lake?",
+            answer:
+              "A wide range on purpose. The neighborhood has a 1920s layer of Spanish and Mediterranean Revival, a celebrated set of mid-century modern hillside houses by architects like Neutra, Schindler, Lautner, and Ain, and a newer layer of contemporary and small-lot construction. Two homes a few streets apart can be completely different products at completely different prices.",
+          },
+          {
+            question: "What should I know about buying a hillside home here?",
+            answer:
+              "Hillside construction brings variables that flat-lot homes do not: foundation type, drainage, slope stability, and access. None of it is a reason to avoid the area, but it does mean the inspection matters more, and reading it correctly is where a buyer either protects themselves or overpays. This is the part of a deal I concentrate on.",
+          },
+          {
+            question: "Does a home being architecturally significant change how it sells?",
+            answer:
+              "Yes. A home by a named architect, or one in a recognized historic context, trades on different logic than standard stock and often carries considerations about what can and cannot be altered. It should be priced and marketed for what it is. That cuts both ways, since pricing a significant home like an ordinary one underprices it, and the reverse leaves it sitting.",
+          },
+          {
+            question: "How does Measure ULA affect selling in Silver Lake?",
+            answer:
+              "The City of Los Angeles transfer tax under Measure ULA applies to sales above its threshold, and a meaningful share of Silver Lake's architectural and hillside-view homes can reach that range. If your sale may cross the threshold, it should be in your net-proceeds math from day one, not discovered at closing.",
+          },
+          {
+            question: "Is Silver Lake a good place to invest?",
+            answer:
+              "It depends entirely on the specific property and the math behind it, which is how I look at any investment, since I invest myself. Silver Lake's low inventory and design-driven demand are part of the picture, but the only thing that decides it is whether a given property's acquisition cost, holding cost, and realistic upside actually work. That is a conversation worth having about a real address rather than the area in general.",
+          },
+        ],
+      },
+    ],
+  },
+
   /* ---------------- FOOTER ---------------- */
   footer: {
     tagline: "Your next move, made right.",
