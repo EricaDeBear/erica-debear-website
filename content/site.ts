@@ -445,7 +445,15 @@ export const site = {
      bracket markers ([MARKET DATA], [REGULATORY], [CONFIRM], [PHOTO]) and the
      trailing "current figures to be supplied" drafting notes. Empty-stats
      areas carry stats: [] with empty scope and source; the tier1-only area
-     carries tier2: "", so the render conditionals omit those blocks. */
+     carries tier2: "", so the render conditionals omit those blocks.
+
+     TIME-SENSITIVE FIGURES: the regulatory figures in these pages move, and the
+     pages are dateless evergreen, so review on these triggers:
+       - Measure ULA (Silver Lake, Sherman Oaks, Encino): after the November
+         2026 ballot vote that may repeal or limit it, and again each July when
+         the thresholds reset with inflation.
+       - Rent control (West Hollywood, Santa Monica): each September, when the
+         annual adjustments reset. */
   neighborhoods: {
     /* Hub lead. overline and heading are the spec-provided structural labels;
        no hub intro copy exists in the draft, so it is omitted rather than
@@ -517,7 +525,7 @@ export const site = {
           {
             question: "How does Measure ULA affect selling in Silver Lake?",
             answer:
-              "The City of Los Angeles transfer tax under Measure ULA applies to sales above its threshold, and a meaningful share of Silver Lake's architectural and hillside-view homes can reach that range. If your sale may cross the threshold, it should be in your net-proceeds math from day one, not discovered at closing.",
+              "Measure ULA is the City of Los Angeles transfer tax, and Silver Lake sits inside city limits, so it applies here. For sales closing after June 30, 2026, the tax is 4 percent on sales at or above $5.4 million and 5.5 percent at or above $10.9 million. It is calculated on the gross sale price, not on your gain, and it sits on top of the existing county and city documentary transfer taxes. A meaningful share of Silver Lake's architectural and hillside-view homes can reach that range. If your sale may cross the threshold, it belongs in your net-proceeds math from day one, not at the closing table. One thing to watch: a statewide ballot measure that would sharply limit ULA is set for the November 2026 ballot, so the rules may change. I track this and will tell you where it stands when we price your home.",
           },
           {
             question: "Is Silver Lake a good place to invest?",
@@ -675,7 +683,7 @@ export const site = {
         },
 
         guidance:
-          "Pasadena rewards knowing the rules. If a home is a designated landmark, a historic monument, or a contributing property in a historic district, certain exterior changes can require a Certificate of Appropriateness before a building permit issues, while interior work is generally exempt. That affects what a buyer can plan and how a seller should position a home. Pasadena also uses the State Historical Building Code, which can allow reasonable alternatives to standard code for historic homes, and eligible designated properties may qualify for Mills Act property-tax savings, which is a genuine financial factor worth checking on a specific home. Underneath all of it is the age of the stock: many of these homes are a century old, the inspection matters, and that is where I focus in the post-offer stretch.",
+          "Pasadena rewards knowing the rules. If a home is a designated landmark, a historic monument, or a contributing property in a historic district, certain exterior changes can require a Certificate of Appropriateness before a building permit issues, while interior work is generally exempt. That affects what a buyer can plan and how a seller should position a home. Pasadena also uses the State Historical Building Code, which can allow reasonable alternatives to standard code for historic homes, and eligible designated properties may qualify for Mills Act property-tax savings, which is a genuine financial factor worth checking on a specific home. Pasadena reports that past Mills Act participants have saved between 20 and 75 percent on property taxes, averaging around half, though the city is explicit that savings are not guaranteed and a long-time owner with a low Proposition 13 base may see little benefit. Underneath all of it is the age of the stock: many of these homes are a century old, the inspection matters, and that is where I focus in the post-offer stretch.",
 
         faq: [
           {
@@ -686,12 +694,12 @@ export const site = {
           {
             question: "What is a Certificate of Appropriateness and will I need one?",
             answer:
-              "In Pasadena's landmark and historic districts, visible exterior changes such as windows, porches, additions, and fences may require a Certificate of Appropriateness before a permit is issued. Interior alterations are generally exempt. If you are buying in a historic district, this shapes what you can change and how quickly projects move, so it is worth understanding before you write an offer.",
+              "In Pasadena's landmark and historic districts, visible exterior changes such as windows, porches, additions, fences, and garages may require a Certificate of Appropriateness before a building permit is issued. Interior alterations are generally exempt, as are things like paint colors, landscaping, and work not visible from the street. If you are buying in a historic district, this shapes what you can change and how fast a project moves, so it is worth understanding before you write an offer rather than after. A practical step most buyers skip: ask the seller for the permit and Certificate of Appropriateness history on the property, along with any Mills Act contract. It tells you what has already been approved and what has not.",
           },
           {
             question: "What is the Mills Act and could it save me money?",
             answer:
-              "The Mills Act is a program that can create meaningful property-tax savings for eligible designated historic properties in exchange for their preservation. Whether a specific home qualifies, and what the savings would be, is worth checking property by property. For the right buyer it is a real financial consideration, not just a preservation nicety.",
+              "The Mills Act lets an owner of a qualifying historic property enter a contract with the city, agreeing to maintain and restore the home in exchange for a reduced property-tax assessment. Pasadena has run its version since 2002, and the city reports that past participants have saved between 20 and 75 percent on property taxes, with the average around half. Two things matter before you count on it. First, there is no guaranteed savings. The assessment is reviewed annually, and if you are a long-time owner already sitting on a low Proposition 13 base-year assessment, the Mills Act may deliver little benefit or even a higher assessed value. It tends to help recent buyers most. Second, the contract runs with the property. It is a ten-year term that renews automatically, it is recorded on title, and it transfers to the next owner along with its maintenance and inspection obligations. If you are buying a home with an existing Mills Act contract, read it before you write the offer.",
           },
           {
             question: "Is buying a historic home in Pasadena more complicated?",
@@ -699,9 +707,9 @@ export const site = {
               "It can come with more to understand: designation status, review process for exterior changes, and the realities of an older home's systems and condition. None of it is a barrier with the right guidance. Pasadena even uses the State Historical Building Code, which can allow sensible alternatives to standard code for historic homes. The key is knowing what you are buying before you commit.",
           },
           {
-            question: "How does Measure ULA affect a Pasadena sale?",
+            question: "Does Measure ULA apply to a Pasadena sale?",
             answer:
-              "Measure ULA is the City of Los Angeles transfer tax and applies to property within the City of Los Angeles. Pasadena is its own incorporated city, so a sale there is treated differently. Either way, every cost that comes out of a sale should be in your net-proceeds math from the start.",
+              "No. Measure ULA is a City of Los Angeles transfer tax, and Pasadena is its own incorporated city, outside LA city limits. The 4 and 5.5 percent ULA surcharges that hit high-value sales inside the City of Los Angeles do not apply here. That is a meaningful difference on an expensive home, and it is one of the reasons the city line matters more than most sellers realize. Your sale will still carry the usual county transfer tax and closing costs, and every one of those belongs in your net-proceeds math from the start.",
           },
         ],
       },
@@ -762,7 +770,7 @@ export const site = {
           {
             question: "How does Measure ULA affect a Sherman Oaks sale?",
             answer:
-              "Sherman Oaks is within the City of Los Angeles, so the Measure ULA transfer tax can apply to sales above its threshold, which the larger southern homes can reach. If your sale may cross it, it belongs in your net-proceeds math from the start.",
+              "Sherman Oaks is within the City of Los Angeles, so the Measure ULA transfer tax applies. For sales closing after June 30, 2026, it is 4 percent at or above $5.4 million and 5.5 percent at or above $10.9 million, charged on the gross sale price rather than on your gain. The larger-lot and hillside homes south of Ventura are the ones most likely to reach that range. If your sale may cross the threshold, it belongs in your net-proceeds math from the start. Worth knowing: a statewide ballot measure that would sharply limit ULA goes before voters in November 2026, so this is a moving target I keep an eye on.",
           },
         ],
       },
@@ -823,7 +831,7 @@ export const site = {
           {
             question: "How does Measure ULA affect an Encino sale?",
             answer:
-              "Encino is within the City of Los Angeles, so the Measure ULA transfer tax can apply above its threshold, which Encino's estate-scale homes frequently reach. On higher-value sales this is a material number and belongs in your net-proceeds planning from day one.",
+              "Encino is within the City of Los Angeles, so Measure ULA applies, and Encino's estate-scale homes reach its thresholds more often than most Valley markets. For sales closing after June 30, 2026, the tax is 4 percent at or above $5.4 million and 5.5 percent at or above $10.9 million, calculated on the gross sale price, not on your gain. On a $6 million sale that is $240,000 off your net, which is not a rounding error. It belongs in your planning before you set a list price, not at closing. A statewide ballot measure that would sharply limit ULA is up for a vote in November 2026, so the picture may change, and I will tell you where it stands when we talk numbers.",
           },
         ],
       },
@@ -869,7 +877,7 @@ export const site = {
           {
             question: "Does Measure ULA apply to a Burbank sale?",
             answer:
-              "Burbank is its own city, separate from the City of Los Angeles, so the City of LA's Measure ULA transfer tax does not apply the way it would on a sale inside LA city limits. The exact transfer-tax treatment is worth confirming for your specific sale, but the headline is that Burbank is governed by its own framework.",
+              "No. Burbank is its own incorporated city, separate from the City of Los Angeles, so the Measure ULA transfer tax that applies to high-value sales inside LA city limits does not reach a Burbank sale. Adjacent cities including Glendale and West Hollywood are in the same position. On a higher-priced home that distinction is worth real money, and it is one of the first things I confirm when we look at your net.",
           },
           {
             question: "Why do so many buyers want Burbank specifically?",
@@ -915,7 +923,7 @@ export const site = {
         },
 
         guidance:
-          "Two things define guidance in West Hollywood. First, it is its own city with its own rules, including a significant rent-control framework, so a transaction here does not follow City of Los Angeles regulations, and an income property's tenancies and rent-regulated status are central to its value, not a footnote. For an investor that analysis is the deal. Second, much of the stock is historic multifamily, where building condition, HOA health on condos, and any historic designation (which can bring both review requirements and potential Mills Act savings) all matter. I look at income property the way an investor does, since I invest myself, and on every property type I treat the inspection and the post-offer window as where the outcome is protected.",
+          "Two things define guidance in West Hollywood. First, it is its own city with its own rules, including a significant rent-control framework, so a transaction here does not follow City of Los Angeles regulations, and an income property's tenancies and rent-regulated status are central to its value, not a footnote. For an investor that analysis is the deal. Second, much of the stock is historic multifamily, where building condition, HOA health on condos, and any historic designation (which can bring both review requirements and potential Mills Act savings) all matter. I look at income property the way an investor does, since I invest myself, and on every property type I treat the inspection and the post-offer window as where the outcome is protected. West Hollywood's rent stabilization program carries a permanent 3 percent ceiling on annual increases for covered units, which is a structural fact worth building into any hold assumption. Confirm the current adjustment and a specific building's registered rents with the city's Rent Stabilization Division.",
 
         faq: [
           {
@@ -931,7 +939,7 @@ export const site = {
           {
             question: "How does rent control affect buying income property here?",
             answer:
-              "Significantly. West Hollywood has its own rent-control framework, and a building's existing tenancies and rent-regulated status are central to its value and its math. For an investor this is the heart of the analysis, and it is the kind of evaluation I run as someone who invests in property myself. Current specifics should be confirmed for the building in question.",
+              "It is the center of the analysis, not a footnote. West Hollywood runs its own rent stabilization program, and the number that matters most to an investor is this: the City Council wrote a permanent 3 percent ceiling into the ordinance, so a rent-stabilized unit here will never see an annual increase above 3 percent, no matter what inflation does. The 2026 adjustment is 2.75 percent, effective September 1. That permanent cap is what distinguishes West Hollywood from a city like Santa Monica, where the allowable increase floats with a formula. For anyone underwriting a building here, that ceiling shapes your rent-growth assumptions for the life of the hold, and a building's existing tenancies and registered maximum allowable rents drive its value more than the asking price does. This is exactly the kind of math I run, because I underwrite property as an investor myself. Confirm current figures with the city's Rent Stabilization Division for the specific building.",
           },
           {
             question: "Does West Hollywood follow City of Los Angeles rules?",
@@ -972,7 +980,7 @@ export const site = {
         },
 
         guidance:
-          "Santa Monica guidance starts with two facts. First, it is its own city with its own strong regulatory and rent-control framework, so transactions do not follow City of Los Angeles rules, and on income property the tenancies and rent-regulated status are central to value rather than incidental. For an investor, that is the analysis. Second, the single-family market is sharply tiered, and an estate north of Montana, a Sunset Park bungalow, and a condo near the core are different markets that should not be priced or shopped interchangeably. Layer in a deep historic multifamily fabric, where building condition, any historic designation, and rent regulation all bear on value, and the need for genuinely local, property-type-specific guidance is clear. I evaluate income property as an investor would, since I invest myself, and across every type I concentrate on the inspection and the renegotiation that follow an accepted offer.",
+          "Santa Monica guidance starts with two facts. First, it is its own city with its own strong regulatory and rent-control framework, so transactions do not follow City of Los Angeles rules, and on income property the tenancies and rent-regulated status are central to value rather than incidental. For an investor, that is the analysis. Second, the single-family market is sharply tiered, and an estate north of Montana, a Sunset Park bungalow, and a condo near the core are different markets that should not be priced or shopped interchangeably. Layer in a deep historic multifamily fabric, where building condition, any historic designation, and rent regulation all bear on value, and the need for genuinely local, property-type-specific guidance is clear. I evaluate income property as an investor would, since I invest myself, and across every type I concentrate on the inspection and the renegotiation that follow an accepted offer. Santa Monica's rent control dates to 1979 and covers most pre-April-1979 buildings, with an allowable annual increase set by formula each year rather than capped permanently. Confirm the current General Adjustment and a specific building's registered rents with the Rent Control Board.",
 
         faq: [
           {
@@ -988,12 +996,12 @@ export const site = {
           {
             question: "How does rent control affect buying income property here?",
             answer:
-              "Substantially. Santa Monica has one of California's more established rent-control frameworks, and an income building's existing tenancies and rent-regulated status are central to its value and its math. That analysis is the deal for an investor, and it is the kind of evaluation I run as a property investor myself. Confirm current specifics for the building in question.",
+              "Substantially, and Santa Monica's regime is one of the oldest and strictest in California. It dates to April 1979 and covers buildings that received a certificate of occupancy before April 10, 1979, which captures most of the city's apartment stock, including duplexes and triplexes. Unlike West Hollywood, where a permanent 3 percent ceiling caps annual increases, Santa Monica's allowable increase is set each year by a formula and can move. The 2026 General Adjustment is 2.6 percent effective September 1, and the Rent Control Board imposed a $70 monthly ceiling on it for units with maximum allowable rents of $2,674 and above. For an investor, a building's registered maximum allowable rents and its existing tenancies drive its value far more than the asking price does, and that analysis is the deal. It is the kind of underwriting I run as a property investor myself. Confirm current figures with the Santa Monica Rent Control Board for the specific building.",
           },
           {
             question: "Does Santa Monica follow City of Los Angeles rules?",
             answer:
-              "No. Santa Monica is its own incorporated city with its own government, regulations, and rent-control regime. The City of Los Angeles's rules, including Measure ULA, do not govern a Santa Monica transaction, though Santa Monica has its own framework to understand. Local, city-specific knowledge matters here.",
+              "No. Santa Monica is its own incorporated city with its own government, its own regulations, and its own rent control board. The City of Los Angeles rules, including the Measure ULA transfer tax, do not govern a Santa Monica sale. Santa Monica has its own framework to understand instead, and on income property that framework is strict. City-specific knowledge is not optional here, it is the whole game.",
           },
           {
             question: "Is Santa Monica only for ultra-high-end buyers?",
