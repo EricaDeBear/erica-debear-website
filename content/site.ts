@@ -614,15 +614,19 @@ export const site = {
           source: "",
         },
 
+        /* Altadena activity and guidance reordered per Erica: lead with the
+           closed sales, demote the rebuild-versus-sell framing, and cut the
+           urgency opener, so the page reads as presence rather than
+           opportunity. Reordering and deletion of existing draft sentences
+           only; no new copy. */
         activity: {
           tier1:
-            "I represent buyers and sellers in Altadena and approach this market with care for where it is right now. Two of my differentiators matter unusually much here: a vetted network of the professionals a transaction or a rebuild actually requires, and an investor's discipline about whether to rebuild, sell as-is, or sell a lot. Those are real decisions for many owners here, and they turn on real numbers, not sentiment.",
-          tier2:
-            "Recent Altadena sales include three closings between $1.35M and $1.525M.",
+            "Recent Altadena sales include three closings between $1.35M and $1.525M. I represent buyers and sellers in Altadena and approach this market with care for where it is right now. Two of my differentiators matter unusually much here: a vetted network of the professionals a transaction or a rebuild actually requires, and an investor's discipline about whether to rebuild, sell as-is, or sell a lot. Those are real decisions for many owners here, and they turn on real numbers, not sentiment.",
+          tier2: "",
         },
 
         guidance:
-          "Altadena right now calls for guidance most generalist marketing skips. For sellers, the central question is often rebuild versus sell, and the honest answer depends on insurance position, lot condition, permitting timeline, and what standing or rebuilt comparable homes are actually doing. That is an analysis, not a slogan, and it is one I am comfortable running because I look at property the way an investor does. For buyers, the considerations include county permitting and preservation process, the difference between a turnkey historic home and a rebuild-in-progress, and the condition and history of a given lot. Across both, the vetted-network point is not a tagline here: the right contractor, the right inspector, and clear-eyed advisors are part of what makes a sound decision possible.",
+          "For buyers, the considerations include county permitting and preservation process, the difference between a turnkey historic home and a rebuild-in-progress, and the condition and history of a given lot. For sellers, the central question is often rebuild versus sell, and the honest answer depends on insurance position, lot condition, permitting timeline, and what standing or rebuilt comparable homes are actually doing. That is an analysis, not a slogan, and it is one I am comfortable running because I look at property the way an investor does. Across both, the vetted-network point is not a tagline here: the right contractor, the right inspector, and clear-eyed advisors are part of what makes a sound decision possible.",
 
         faq: [
           {
