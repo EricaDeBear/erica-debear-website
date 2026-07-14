@@ -14,6 +14,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/search", priority: 0.8, changeFrequency: "weekly" },
     { path: "/press", priority: 0.7, changeFrequency: "monthly" },
     { path: "/faq", priority: 0.6, changeFrequency: "monthly" },
+    { path: "/neighborhoods", priority: 0.7, changeFrequency: "monthly" },
+    // Nine neighborhood spokes, generated so adding an area needs no edit here.
+    ...site.neighborhoods.areas.map((a) => ({
+      path: `/neighborhoods/${a.slug}`,
+      priority: 0.6,
+      changeFrequency: "monthly" as const,
+    })),
     { path: "/contact", priority: 0.9, changeFrequency: "yearly" },
     { path: "/newsletter", priority: 0.6, changeFrequency: "yearly" },
     { path: "/terms", priority: 0.2, changeFrequency: "yearly" },
