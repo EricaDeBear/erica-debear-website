@@ -132,6 +132,10 @@ export const site = {
       { name: "Robb Report", href: "/press", logo: "/images/press-robbreport.svg" },
       { name: "AOL", href: "/press", logo: "/images/press-aol.svg" },
       { name: "The Eastsider LA", href: "/press", logo: "/images/press-eastsider.svg" },
+      { name: "California Post", href: "/press", logo: "/images/press-californiapost.svg" },
+      { name: "Haven Lifestyles", href: "/press", logo: "/images/press-havenlifestyles.svg" },
+      { name: "Homes of Celebs", href: "/press", logo: "/images/press-homesofcelebs.svg" },
+      { name: "Yahoo! Life", href: "/press", logo: "/images/press-yahoolife.svg" },
     ],
   },
 
