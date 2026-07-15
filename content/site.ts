@@ -1065,6 +1065,7 @@ export const site = {
     quickLinksExtra: [
       { label: "FAQ", href: "/faq" },
       { label: "Neighborhoods", href: "/neighborhoods" },
+      { label: "Google Reviews", href: "https://maps.app.goo.gl/Sx9hnsxeFuJb4wW96" },
     ],
     legalLinks: [
       { label: "Terms of Use", href: "/terms" },

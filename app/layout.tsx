@@ -106,7 +106,10 @@ const jsonLd = {
     reviewCount: site.seo.rating.reviewCount,
     bestRating: site.seo.rating.bestRating,
   },
-  sameAs: site.contact.socials.map((s) => s.href),
+  sameAs: [
+    ...site.contact.socials.map((s) => s.href),
+    "https://www.google.com/maps/place/Erica+DeBear,+Realtor/data=!4m2!3m1!1s0x230b457eaab4c93f:0x7e2035fbb05a0a71",
+  ],
 };
 
 export default function RootLayout({
