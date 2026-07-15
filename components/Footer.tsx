@@ -58,11 +58,19 @@ export default function Footer() {
                   {n.label}
                 </Link>
               ))}
-              {footer.quickLinksExtra.map((l) => (
-                <Link key={l.label} href={l.href} className="text-on-dark/80 hover:text-on-dark transition">
-                  {l.label}
-                </Link>
-              ))}
+              {footer.quickLinksExtra.map((l) => {
+                const external = l.href.startsWith("http");
+                return (
+                  <Link
+                    key={l.label}
+                    href={l.href}
+                    className="text-on-dark/80 hover:text-on-dark transition"
+                    {...(external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+                  >
+                    {l.label}
+                  </Link>
+                );
+              })}
             </div>
           </div>
         </div>
