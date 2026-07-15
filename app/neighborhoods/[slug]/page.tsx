@@ -13,9 +13,10 @@ export function generateStaticParams() {
   return areas.map((a) => ({ slug: a.slug }));
 }
 
-/* metaTitle / metaDescription are not in the content draft, so the page title
-   is built from the area name (draft sourced) plus the site title template.
-   FLAGGED: dedicated meta copy per area still needs to be written. */
+/* Per-area SEO metadata. Title and description come from the area object,
+   each with a fallback if absent. The provided metaTitle already carries the
+   brand, so it is applied as an absolute title (no template suffix). openGraph
+   reuses the same values so shared links carry the right text. */
 export async function generateMetadata({
   params,
 }: {
@@ -24,9 +25,14 @@ export async function generateMetadata({
   const { slug } = await params;
   const area = areas.find((a) => a.slug === slug);
   if (!area) return {};
+  const fallbackTitle = `${area.name} | Erica DeBear`;
+  const title = area.metaTitle ?? fallbackTitle;
+  const description = area.metaDescription ?? site.meta.description;
   return {
-    title: `${area.name} Real Estate`,
+    title: { absolute: title },
+    description,
     alternates: { canonical: `/neighborhoods/${area.slug}` },
+    openGraph: { title, description },
   };
 }
 

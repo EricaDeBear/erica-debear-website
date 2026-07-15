@@ -482,6 +482,10 @@ export const site = {
         name: "Silver Lake",
         region: "Eastside",
 
+        metaTitle: "Silver Lake Real Estate | Erica DeBear",
+        metaDescription:
+          "Buying or selling in Silver Lake, from Neutra-era modernist hillside homes to 1920s Spanish and small-lot new construction. Local guidance from Erica DeBear.",
+
         overview:
           "Silver Lake sits in the hills northeast of Downtown, built around the reservoir that gives the neighborhood its name. The terrain is the reason the architecture is what it is. The slopes around the water were too steep for the gridded tract housing going up elsewhere in early Los Angeles, so the lots here drew architects who treated a hillside as a problem worth solving rather than avoiding. The result is one of the most architecturally significant concentrations of homes in the city, and a market that rewards knowing the difference between one street and the next.",
 
@@ -542,6 +546,10 @@ export const site = {
         slug: "el-sereno",
         name: "El Sereno",
         region: "Eastside",
+
+        metaTitle: "El Sereno Real Estate | Erica DeBear",
+        metaDescription:
+          "El Sereno homes, from Berkshire Craftsman district bungalows to hillside view lots. Historic-stock and market guidance from broker associate Erica DeBear.",
 
         overview:
           "El Sereno sits at the eastern edge of Los Angeles, in the rolling hills between Highland Park, South Pasadena, and Alhambra. It is one of the oldest parts of the city, with a development history that runs back through Rancho Rosa de Castilla, and it carries a housing stock that reflects more than a century of building. For a long time it stayed off the radar of buyers focused on neighboring Eastside markets, which is part of why its character homes survived largely intact. It is a quieter market than Silver Lake or Highland Park, with hillside lots, views, and an early-20th-century building fabric that rewards a close look.",
@@ -604,6 +612,10 @@ export const site = {
         name: "Altadena",
         region: "Eastside",
 
+        metaTitle: "Altadena Real Estate | Erica DeBear",
+        metaDescription:
+          "Altadena homes and the post-fire market, from Janes Cottages to rebuilds and lots. Careful, experienced guidance from Erica DeBear, with recent local closings.",
+
         overview:
           "Altadena sits in the foothills of the San Gabriel Mountains, just north of Pasadena, in unincorporated Los Angeles County. It is known for a deep stock of early-20th-century character homes and a strong preservation culture. In January 2025 the Eaton Fire caused significant loss across the community, and a large, organized rebuilding effort has been underway since. Any honest look at Altadena's market today has to hold both things at once: a historic foothill neighborhood with genuine architectural depth, and a community in active recovery. Buying or selling here now means understanding rebuild status, lot condition, and county process, alongside the usual questions of a home.",
 
@@ -664,6 +676,10 @@ export const site = {
         slug: "pasadena",
         name: "Pasadena",
         region: "Eastside",
+
+        metaTitle: "Pasadena Real Estate | Erica DeBear",
+        metaDescription:
+          "Pasadena homes across its historic districts, Craftsman to Mills Act properties. Guidance on designation, Certificates of Appropriateness, and value from Erica DeBear.",
 
         overview:
           "Pasadena sits at the base of the San Gabriel Mountains, northeast of Downtown Los Angeles, and it is one of Southern California's most architecturally important cities. Founded in 1875, it grew quickly in the early 20th century into a center of the American Arts and Crafts movement, and that history is still legible in its streets today. It has more than 130 locally designated landmarks and historic monuments and dozens of historic districts, which makes it a city where, more than almost anywhere in the region, architectural designation and process are part of how homes are bought and sold.",
@@ -726,6 +742,10 @@ export const site = {
         name: "Sherman Oaks",
         region: "Valley",
 
+        metaTitle: "Sherman Oaks Real Estate | Erica DeBear",
+        metaDescription:
+          "Sherman Oaks homes on both sides of Ventura, from flats to hillside estates. Tier-by-tier market guidance from broker associate Erica DeBear.",
+
         overview:
           "Sherman Oaks sits in the southern San Fernando Valley, organized around the Ventura Boulevard corridor and reaching from the valley floor up into the Santa Monica Mountains foothills to the south. It was platted in 1927 by General Moses Hazeltine Sherman, whose company subdivided roughly a thousand acres of former ranch and orchard land into the residential tract that took his name. Today it is one of the Valley's anchor markets, known for a walkable boulevard, a wide architectural range, and a clear split in character between the flatter streets north of Ventura and the larger-lot hillside streets to the south.",
 
@@ -786,6 +806,10 @@ export const site = {
         slug: "encino",
         name: "Encino",
         region: "Valley",
+
+        metaTitle: "Encino Real Estate | Erica DeBear",
+        metaDescription:
+          "Encino homes on larger lots, from original Spanish estates to contemporary rebuilds. Guidance on an often off-market luxury tier from Erica DeBear.",
 
         overview:
           "Encino sits in the southern San Fernando Valley, just west of Sherman Oaks, and is the larger-lot, more estate-oriented of the two anchor markets. Where Sherman Oaks is organized around a walkable boulevard, Encino is more residential in character, with generous lots, a concentration south of Ventura Boulevard, and a long association with established Valley homeownership. It draws a buyer pool that overlaps with Sherman Oaks but skews toward those seeking more land and a more private, estate-scale setting.",
@@ -848,6 +872,10 @@ export const site = {
         name: "Burbank",
         region: "Valley",
 
+        metaTitle: "Burbank Real Estate | Erica DeBear",
+        metaDescription:
+          "Burbank homes, from Magnolia Park character cottages to valley-floor Ranch and the hills. Local guidance from broker associate Erica DeBear.",
+
         overview:
           "Burbank sits at the eastern edge of the San Fernando Valley, between the Verdugo and Santa Monica mountains, about thirteen miles north of Downtown Los Angeles. It is its own incorporated city, not part of the City of Los Angeles, which matters for everything from permitting to transfer taxes. Long known as a center of the entertainment and, historically, aircraft industries, Burbank pairs a stable, well-kept residential fabric on the valley floor with hillside homes in the Burbank Hills, and a walkable character district in Magnolia Park.",
 
@@ -903,6 +931,10 @@ export const site = {
         slug: "west-hollywood",
         name: "West Hollywood",
         region: "Westside",
+
+        metaTitle: "West Hollywood Real Estate | Erica DeBear",
+        metaDescription:
+          "West Hollywood condos and income property, from 1920s courtyard buildings to modern units. Rent-control and investor guidance from Erica DeBear.",
 
         overview:
           "West Hollywood is a small, dense, independent city wedged between Beverly Hills, Hollywood, and the Hollywood Hills, with its own government, its own rules, and a housing character distinct from the City of Los Angeles around it. It is known for one of the region's richest concentrations of 1920s courtyard apartments and Spanish Revival design, a largely multifamily and condo housing fabric, and a strong rent-control framework. For buyers and sellers it is a market where the property type, condominium versus income property versus the rarer single-family home, and the city's own regulations drive the conversation.",
@@ -965,6 +997,10 @@ export const site = {
         slug: "santa-monica",
         name: "Santa Monica",
         region: "Westside",
+
+        metaTitle: "Santa Monica Real Estate | Erica DeBear",
+        metaDescription:
+          "Santa Monica homes across its coastal tiers, plus rent-controlled income property. Guidance north of Montana to the core from broker associate Erica DeBear.",
 
         overview:
           "Santa Monica is a coastal city on the western edge of Los Angeles County, independent of the City of Los Angeles, with its own government and a strong regulatory framework. It pairs some of the region's most valuable residential real estate with a dense and historically significant stock of apartments and courtyard housing, and it operates one of California's more established rent-control regimes. The market splits sharply by geography and by property type, from estate-scale homes north of Montana to condos and income properties closer to the core, which makes knowing which Santa Monica you are in essential.",

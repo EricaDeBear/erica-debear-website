@@ -8,6 +8,8 @@ const { overline, heading, cta, regions, areas } = site.neighborhoods;
 
 export const metadata: Metadata = {
   title: heading,
+  description:
+    "Neighborhood real estate guides across Greater Los Angeles, from the Eastside to the Valley and Westside. Local market guidance from Erica DeBear.",
   alternates: { canonical: "/neighborhoods" },
 };
 
